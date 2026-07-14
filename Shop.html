@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Threads - Shop</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Shop.css">
+</head>
+
+<body>
+
+<header class="header-position">
+    <!-- Logo -->
+    <div class="logo">
+        <h1>Ur<span><i>ba</i></span>n Thr<span><i>ea</i></span>ds</h1>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Shop.html">Shop</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Buttons -->
+    <div class="button">
+        <button class="cart-btn">🛒 Cart</button>
+        <button class="login-btn">Login</button>
+    </div>
+
+</header>
+
+<!-- ================= Shop Banner ================= -->
+<section class="shop-banner">
+    <div class="shop-banner-content">
+        <h4>URBAN THREADS</h4>
+        <h1>Shop Collection</h1>
+        <p>
+            Explore our premium clothing collection designed for every style and every occasion.
+        </p>
+        <div class="breadcrumb">
+            <a href="Home.html">Home</a>
+            <span>/</span>
+            <p>Shop</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= Shop Controls ================= -->
+
+<section class="shop-controls">
+    <div class="search-box">
+        <input type="text" placeholder="Search products...">
+    </div>
+    <div class="filter-box">
+        <select>
+            <option>All Categories</option>
+            <option>T-Shirts</option>
+            <option>Shirts</option>
+            <option>Hoodies</option>
+            <option>Jeans</option>
+        </select>
+    </div>
+    <div class="sort-box">
+        <select>
+            <option>Sort By</option>
+            <option>Newest</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Best Selling</option>
+        </select>
+    </div>
+</section>
+
+<!-- ================= Shop Products ================= -->
+<section class="shop-products">
+    <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <span class="product-badge">NEW</span>
+            <div class="wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+            <img src="images/product1.jpg" alt="Oversized T-Shirt">
+            <div class="product-content">
+                <h3>Oversized T-Shirt</h3>
+                <div class="rating">
+                    ★★★★★
+                </div>
+                <div class="price">
+                    <span class="new-price">$29.99</span>
+                    <span class="old-price">$39.99</span>
+                </div>
+                <div class="product-buttons">
+                    <button class="cart-btn">Add to Cart</button>
+                    <button class="view-btn">Quick View</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-card">
+            <span class="product-badge sale">SALE</span>
+            <div class="wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+            <img src="images/product2.jpg" alt="Casual Shirt">
+            <div class="product-content">
+                <h3>Casual Shirt</h3>
+                <div class="rating">
+                    ★★★★☆
+                </div>
+                <div class="price">
+                    <span class="new-price">$34.99</span>
+                    <span class="old-price">$45.99</span>
+                </div>
+                <div class="product-buttons">
+                    <button class="cart-btn">Add to Cart</button>
+                    <button class="view-btn">Quick View</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-card">
+            <span class="product-badge">HOT</span>
+            <div class="wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+            <img src="images/product3.jpg" alt="Premium Hoodie">
+            <div class="product-content">
+                <h3>Premium Hoodie</h3>
+                <div class="rating">
+                    ★★★★★
+                </div>
+                <div class="price">
+                    <span class="new-price">$49.99</span>
+                    <span class="old-price">$65.99</span>
+                </div>
+                <div class="product-buttons">
+                    <button class="cart-btn">Add to Cart</button>
+                    <button class="view-btn">Quick View</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="product-card">
+            <span class="product-badge">NEW</span>
+            <div class="wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+            <img src="images/product4.jpg" alt="Denim Jeans">
+            <div class="product-content">
+                <h3>Denim Jeans</h3>
+                <div class="rating">
+                    ★★★★☆
+                </div>
+                <div class="price">
+                    <span class="new-price">$44.99</span>
+                    <span class="old-price">$59.99</span>
+                </div>
+                <div class="product-buttons">
+                    <button class="cart-btn">Add to Cart</button>
+                    <button class="view-btn">Quick View</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= Pagination ================= -->
+
+<section class="pagination">
+
+    <button class="page-btn">← Previous</button>
+
+    <div class="page-numbers">
+
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+
+    </div>
+
+    <button class="page-btn">Next →</button>
+
+</section>
+
+<!-- ================= Footer ================= -->
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo & About -->
+        <div class="footer-box">
+            <h2>Urban Threads</h2>
+            <p>
+                Discover premium fashion designed for comfort, confidence, and everyday style.
+            </p>
+        </div>
+        <!-- Quick Links -->
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Customer Care -->
+        <div class="footer-box">
+            <h3>Customer Care</h3>
+            <ul>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+        <!-- Contact -->
+        <div class="footer-box">
+            <h3>Contact</h3>
+            <p><i class="fa-solid fa-envelope"></i> info@urbanthreads.com</p>
+            <p><i class="fa-solid fa-phone"></i> +92 300 1234567</p>
+            <p><i class="fa-solid fa-location-dot"></i> Karachi, Pakistan</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Urban Threads. All Rights Reserved.</p>
+    </div>
+</footer>
