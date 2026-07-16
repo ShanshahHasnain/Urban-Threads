@@ -520,6 +520,34 @@ body {
 }
 
 /* ===========================
+   Toast Notification
+=========================== */
+
+.toast{
+    position:fixed;
+    top:25px;
+    right:25px;
+    background:#111;
+    color:white;
+    padding:15px 25px;
+    border-radius:8px;
+    font-size:15px;
+    font-weight:500;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-20px);
+    transition:.3s ease;
+    z-index:9999;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.toast.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+/* ===========================
    Footer
 =========================== */
 

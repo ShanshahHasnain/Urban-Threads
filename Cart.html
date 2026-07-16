@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Threads - Cart</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="Cart.css">
+</head>
+
+<body>
+    <header class="header-position">
+        <!-- Logo -->
+        <div class="logo">
+            <h1>Ur<span><i>ba</i></span>n Thr<span><i>ea</i></span>ds</h1>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Buttons -->
+        <div class="button">
+            <a href="Cart.html">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    Cart (<span id="cartCount">0</span>)
+                </button>
+            </a>
+            <button class="login-btn" id="loginBtn">
+                <i class="fa-solid fa-user"></i> Login
+            </button>
+        </div>
+
+    </header>
+    <!-- ================= Cart Banner ================= -->
+
+    <section class="cart-banner">
+        <div class="cart-banner-content">
+            <h4>URBAN THREADS</h4>
+            <h1>Shopping Cart</h1>
+            <p>Review your selected products before proceeding to checkout.</p>
+
+            <div class="breadcrumb">
+                <a href="Home.html">Home</a>
+                <span>/</span>
+                <p>Cart</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Shopping Cart ================= -->
+    <section class="shopping-cart">
+        <div class="cart-left">
+            <h2>Your Cart</h2>
+            <div id="cartItems">
+
+                <!-- Products will come here from JavaScript -->
+            </div>
+        </div>
+        <div class="cart-right">
+            <h2>Order Summary</h2>
+            <div class="summary-box">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span>Free</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax</span>
+                    <span>$0.00</span>
+                </div>
+                <hr>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="grandTotal">$0.00</span>
+                </div>
+                <a href="Checkout.html">
+                    <button class="checkout-btn">
+                        Proceed to Checkout
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Footer ================= -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Logo & About -->
+            <div class="footer-box">
+                <h2>Urban Threads</h2>
+                <p>
+                    Discover premium fashion designed for comfort, confidence, and everyday style.
+                </p>
+            </div>
+            <!-- Quick Links -->
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Shop.html">Shop</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Customer Care -->
+            <div class="footer-box">
+                <h3>Customer Care</h3>
+                <ul>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <!-- Contact -->
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-envelope"></i> info@urbanthreads.com</p>
+                <p><i class="fa-solid fa-phone"></i> +92 300 1234567</p>
+                <p><i class="fa-solid fa-location-dot"></i> Karachi, Pakistan</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Urban Threads. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+<script src="Cart.js"></script>
+
+</html>
