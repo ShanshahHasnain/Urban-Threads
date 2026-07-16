@@ -33,10 +33,15 @@
     </nav>
 
     <!-- Buttons -->
-    <div class="button">
-        <button class="cart-btn">🛒 Cart</button>
-        <button class="login-btn">Login</button>
-    </div>
+        <div class="button">
+            <button class="cart-btn" id="cartBtn">
+                <i class="fa-solid fa-bag-shopping"></i>
+                Cart (<span id="cartCount">0</span>)
+            </button>
+            <button class="login-btn" id="loginBtn">
+                <i class="fa-solid fa-user"></i> Login
+            </button>
+        </div>
 
 </header>
 
@@ -154,20 +159,22 @@
             </ul>
         </div>
         <!-- Contact -->
-        <div class="footer-box">
-            <h3>Contact</h3>
-            <p><i class="fa-solid fa-envelope"></i> info@urbanthreads.com</p>
-            <p><i class="fa-solid fa-phone"></i> +92 300 1234567</p>
-            <p><i class="fa-solid fa-location-dot"></i> Karachi, Pakistan</p>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-envelope"></i> info@urbanthreads.com</p>
+                <p><i class="fa-solid fa-phone"></i> +92 300 1234567</p>
+                <p><i class="fa-solid fa-location-dot"></i> Karachi, Pakistan</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
             </div>
-        </div>
     </div>
     <div class="footer-bottom">
         <p>© 2026 Urban Threads. All Rights Reserved.</p>
     </div>
 </footer>
+
+<script src="Contact.js"></script>
