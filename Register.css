@@ -191,146 +191,255 @@ body {
 }
 
 /* ===========================
-   Checkout Banner
+   Register Banner
 =========================== */
 
-.checkout-banner{
-    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-    url("images/checkout-banner.jpg");
-    background-size: cover;
-    background-position: center;
-    padding: 120px 80px;
-    text-align: center;
-    color: white;
+.register-banner{
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("images/login-banner.jpg");
+    background-size:cover;
+    background-position:center;
+    padding:120px 80px;
+    text-align:center;
+    color:#fff;
 }
 
-.checkout-banner h4{
+.register-banner h4{
     color:#FFD166;
     letter-spacing:3px;
     margin-bottom:15px;
 }
 
-.checkout-banner h1{
+.register-banner h1{
     font-size:55px;
     margin-bottom:15px;
 }
 
-.checkout-banner p{
-    font-size:18px;
+.register-banner p{
     color:#eee;
-}
-
-.breadcrumb{
-    margin-top:25px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:12px;
-}
-
-.breadcrumb a{
-    color:#FFD166;
-}
-
-.breadcrumb span{
-    color:white;
+    font-size:18px;
 }
 
 /* ===========================
-   Checkout Layout
+   Register Section
 =========================== */
 
-.checkout{
-    padding:100px 80px;
+.register{
+    padding:100px 20px;
     background:#f8f4ee;
 }
 
-.checkout-container{
-    display:grid;
-    grid-template-columns:2fr 1fr;
-    gap:40px;
-}
-
-/* ===========================
-   Billing Details
-=========================== */
-
-.billing-details{
-    background:white;
-    padding:40px;
+.register-container{
+    max-width:500px;
+    margin:auto;
+    background:#fff;
+    padding:45px;
     border-radius:15px;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
-.billing-details h2{
+.register-container h2{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.register-container p{
+    text-align:center;
+    color:#666;
     margin-bottom:30px;
 }
+
+/* ===========================
+   Form
+=========================== */
 
 .form-row{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:20px;
+    gap:15px;
 }
 
-.billing-details input{
+.register-container input{
     width:100%;
     padding:15px;
-    margin-bottom:20px;
     border:1px solid #ddd;
     border-radius:8px;
+    margin-bottom:20px;
     font-size:15px;
+    outline:none;
+    box-sizing:border-box;
 }
 
-.billing-details h3{
-    margin:25px 0 15px;
-}
-
-.billing-details label{
-    display:block;
-    margin-bottom:15px;
-    cursor:pointer;
+.register-container input:focus{
+    border-color:#8B5E3C;
 }
 
 /* ===========================
-   Order Summary
+   Password
 =========================== */
 
-.order-summary{
-    background:white;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    height:fit-content;
-    position:sticky;
-    top:100px;
+.password-box{
+    position:relative;
 }
 
-.order-summary h2{
+.password-box i{
+    position:absolute;
+    right:18px;
+    top:18px;
+    cursor:pointer;
+    color:#666;
+}
+
+/* ===========================
+   Terms
+=========================== */
+
+.terms{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:14px;
     margin-bottom:25px;
 }
 
-.summary p,
-.summary h3{
-    display:flex;
-    justify-content:space-between;
-    margin:18px 0;
+.terms input{
+    width:auto;
+    margin:0;
 }
 
-.summary button{
+/* ===========================
+   Buttons
+=========================== */
+
+.register-container button{
     width:100%;
     padding:15px;
     border:none;
-    background:#111;
-    color:white;
     border-radius:8px;
-    font-size:16px;
     cursor:pointer;
+    font-size:16px;
     transition:.3s;
 }
 
-.summary button:hover{
+.register-container form button{
+    background:#111;
+    color:#fff;
+}
+
+.register-container form button:hover{
     background:#8B5E3C;
 }
+
+.google-btn{
+    background:#fff;
+    border:1px solid #ddd;
+    color:#333;
+}
+
+.google-btn:hover{
+    background:#f5f5f5;
+}
+
+/* ===========================
+   Divider
+=========================== */
+
+.divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:25px 0;
+}
+
+.divider::before,
+.divider::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:#ddd;
+}
+
+.divider span{
+    margin:0 15px;
+    color:#777;
+}
+
+/* ===========================
+   Login Link
+=========================== */
+
+.register-link{
+    text-align:center;
+    margin-top:25px;
+}
+
+.register-link a{
+    color:#8B5E3C;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.register-link a:hover{
+    text-decoration:underline;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+    .register-banner{
+        padding:90px 20px;
+    }
+
+    .register-banner h1{
+        font-size:40px;
+    }
+
+    .register-container{
+        padding:30px 20px;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ===========================
+   Toast Notification
+=========================== */
+
+.toast{
+    position:fixed;
+    top:30px;
+    right:30px;
+    background:#111;
+    color:#fff;
+    padding:15px 25px;
+    border-radius:8px;
+    font-size:15px;
+    font-weight:500;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(-20px);
+
+    transition:.35s;
+
+    z-index:9999;
+}
+
+.toast.show{
+
+    opacity:1;
+    visibility:visible;
+
+    transform:translateY(0);
+
+}r
 
 /* ===========================
    Footer

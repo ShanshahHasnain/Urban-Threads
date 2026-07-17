@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Threads - Cart</title>
+    <title>Urban Threads - Register</title>
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="Cart.css">
+    <link rel="stylesheet" href="Register.css">
 </head>
 
 <body>
@@ -63,59 +63,96 @@
         </div>
 
     </header>
-    <!-- ================= Cart Banner ================= -->
 
-    <section class="cart-banner">
-        <div class="cart-banner-content">
-            <h4>URBAN THREADS</h4>
-            <h1>Shopping Cart</h1>
-            <p>Review your selected products before proceeding to checkout.</p>
+    <!-- ================= Register Banner ================= -->
 
-            <div class="breadcrumb">
-                <a href="Home.html">Home</a>
-                <span>/</span>
-                <p>Cart</p>
+<section class="register-banner">
+    <div class="register-banner-content">
+        <h4>URBAN THREADS</h4>
+        <h1>Create Account</h1>
+        <p>Join Urban Threads and start your fashion journey.</p>
+    </div>
+</section>
+
+<!-- ================= Register ================= -->
+
+<section class="register">
+    <div class="register-container">
+        <h2>Create Your Account</h2>
+        <p>Fill in your details to get started.</p>
+        <form id="registerForm">
+            <div class="form-row">
+                <input
+                    type="text"
+                    id="firstName"
+                    placeholder="First Name"
+                    required
+                >
+                <input
+                    type="text"
+                    id="lastName"
+                    placeholder="Last Name"
+                    required
+                >
             </div>
-        </div>
-    </section>
-
-    <!-- ================= Shopping Cart ================= -->
-    <section class="shopping-cart">
-        <div class="cart-left">
-            <h2>Your Cart</h2>
-            <div id="cartItems">
-
-                <!-- Products will come here from JavaScript -->
+            <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                required
+            >
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Phone Number"
+                required
+            >
+            <div class="password-box">
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    required
+                >
+                <i class="fa-solid fa-eye" id="togglePassword"></i>
             </div>
-        </div>
-        <div class="cart-right">
-            <h2>Order Summary</h2>
-            <div class="summary-box">
-                <div class="summary-row">
-                    <span>Subtotal</span>
-                    <span id="subtotal">$0.00</span>
-                </div>
-                <div class="summary-row">
-                    <span>Shipping</span>
-                    <span>Free</span>
-                </div>
-                <div class="summary-row">
-                    <span>Tax</span>
-                    <span>$0.00</span>
-                </div>
-                <hr>
-                <div class="summary-row total">
-                    <span>Total</span>
-                    <span id="grandTotal">$0.00</span>
-                </div>
-                <a href="Checkout.html">
-                    <button class="checkout-btn">
-                        Proceed to Checkout
-                    </button>
-                </a>
+            <div class="password-box">
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm Password"
+                    required
+                >
+                <i class="fa-solid fa-eye" id="toggleConfirmPassword"></i>
             </div>
+            <label class="terms">
+                <input
+                    type="checkbox"
+                    id="terms"
+                    required
+                >
+                I agree to the Terms & Conditions
+            </label>
+            <button type="submit">
+                Create Account
+            </button>
+        </form>
+        <div class="divider">
+            <span>OR</span>
         </div>
-    </section>
+        <button class="google-btn">
+            <i class="fa-brands fa-google"></i>
+            Continue with Google
+        </button>
+        <p class="register-link">
+            Already have an account?
+            <a href="Login.html">
+                Login
+            </a>
+        </p>
+    </div>
+</section>
+
 
     <!-- ================= Footer ================= -->
 
@@ -167,8 +204,10 @@
             <p>© 2026 Urban Threads. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <div id="toast" class="toast"></div>
+    <script type="module" src="Common.js"></script>
+    <script type="module" src="Register.js"></script>
 </body>
-<script type="module" src="Common.js"></script>
-<script src="Cart.js"></script>
 
 </html>

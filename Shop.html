@@ -35,16 +35,36 @@
         </nav>
 
         <!-- Buttons -->
+    
         <div class="button">
+
             <a href="Cart.html">
                 <button class="cart-bton" id="cartBton">
                     <i class="fa-solid fa-bag-shopping"></i>
                     Cart (<span id="cartCount">0</span>)
                 </button>
             </a>
-            <button class="login-btn" id="loginBtn">
-                <i class="fa-solid fa-user"></i> Login
-            </button>
+
+            <div class="user-menu">
+
+                <button class="login-btn" id="loginBtn">
+                    <i class="fa-solid fa-user"></i> Login
+                </button>
+
+                <div class="dropdown-menu" id="dropdownMenu">
+
+                    <a href="#">👤 My Profile</a>
+
+                    <a href="#">📦 My Orders</a>
+
+                    <button id="logoutBtn">
+                        🚪 Logout
+                    </button>
+
+                </div>
+
+            </div>
+
         </div>
 
     </header>
@@ -254,5 +274,5 @@
 
     <div id="toast" class="toast"></div>
 
-    <script src="Common.js"></script>
+    <script type="module" src="Common.js"></script>
     <script src="Shop.js"></script>>

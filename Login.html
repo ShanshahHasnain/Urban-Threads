@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Threads - Cart</title>
+    <title>Urban Threads - Login</title>
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="Cart.css">
+    <link rel="stylesheet" href="Login.css">
 </head>
 
 <body>
@@ -63,57 +63,61 @@
         </div>
 
     </header>
-    <!-- ================= Cart Banner ================= -->
 
-    <section class="cart-banner">
-        <div class="cart-banner-content">
+    <!-- ================= Login Banner ================= -->
+
+    <section class="login-banner">
+
+        <div class="login-banner-content">
+
             <h4>URBAN THREADS</h4>
-            <h1>Shopping Cart</h1>
-            <p>Review your selected products before proceeding to checkout.</p>
 
-            <div class="breadcrumb">
-                <a href="Home.html">Home</a>
-                <span>/</span>
-                <p>Cart</p>
-            </div>
+            <h1>Login</h1>
+
+            <p>Welcome back! Sign in to your account.</p>
+
         </div>
+
     </section>
 
-    <!-- ================= Shopping Cart ================= -->
-    <section class="shopping-cart">
-        <div class="cart-left">
-            <h2>Your Cart</h2>
-            <div id="cartItems">
+    <!-- ================= Login ================= -->
 
-                <!-- Products will come here from JavaScript -->
+    <section class="login">
+        <div class="login-container">
+            <h2>Welcome Back</h2>
+            <p>Sign in to access your Urban Threads account.</p>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Email Address" required>
+                <div class="password-box">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <i class="fa-solid fa-eye" id="togglePassword"></i>
+                </div>
+                <div class="login-options">
+                    <label>
+                        <input type="checkbox">
+                        Remember Me
+                    </label>
+                    <a href="ForgotPassword.html">
+                        Forgot Password?
+                    </a>
+                </div>
+                <button type="submit">
+                    Login
+                </button>
+            </form>
+            <div class="divider">
+                <span>OR</span>
             </div>
-        </div>
-        <div class="cart-right">
-            <h2>Order Summary</h2>
-            <div class="summary-box">
-                <div class="summary-row">
-                    <span>Subtotal</span>
-                    <span id="subtotal">$0.00</span>
-                </div>
-                <div class="summary-row">
-                    <span>Shipping</span>
-                    <span>Free</span>
-                </div>
-                <div class="summary-row">
-                    <span>Tax</span>
-                    <span>$0.00</span>
-                </div>
-                <hr>
-                <div class="summary-row total">
-                    <span>Total</span>
-                    <span id="grandTotal">$0.00</span>
-                </div>
-                <a href="Checkout.html">
-                    <button class="checkout-btn">
-                        Proceed to Checkout
-                    </button>
+            <button class="google-btn">
+                <i class="fa-brands fa-google"></i>
+                Continue with Google
+            </button>
+            <p class="register-link">
+                Don't have an account?
+                <a href="Register.html">
+                    Create Account
                 </a>
-            </div>
+            </p>
         </div>
     </section>
 
@@ -167,8 +171,10 @@
             <p>© 2026 Urban Threads. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <div id="toast" class="toast"></div>
+    <script type="module" src="Common.js"></script>
+    <script type="module" src="Login.js"></script>
 </body>
-<script type="module" src="Common.js"></script>
-<script src="Cart.js"></script>
 
 </html>
