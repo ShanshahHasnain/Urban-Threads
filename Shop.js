@@ -2,6 +2,18 @@
 // Urban Threads Shop.js
 // ===============================
 
+import { auth, database } from "./Firebase.js";
+
+import {
+    onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js";
+
+import {
+    ref,
+    set,
+    get
+} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-database.js";
+
 const searchBox = document.getElementById("searchBox");
 
 const categoryFilter = document.getElementById("categoryFilter");
@@ -101,3 +113,104 @@ addToCartButtons.forEach(button => {
 
 
 updateCartCount();
+
+// ===============================
+// Load Wishlist Status
+// ===============================
+
+onAuthStateChanged(auth, async (user) => {
+
+    if (!user) return;
+
+    const snapshot = await get(ref(database, `wishlist/${user.uid}`));
+
+    if (!snapshot.exists()) return;
+
+    const wishlist = snapshot.val();
+
+    document.querySelectorAll(".product-card").forEach(card => {
+
+        const productId = card.dataset.id;
+
+        if (wishlist[productId]) {
+
+            card.querySelector(".wishlist-btn").innerHTML =
+                `<i class="fa-solid fa-heart"></i>`;
+
+        }
+
+    });
+
+});
+
+
+// ===============================
+// Add To Wishlist
+// ===============================
+
+const wishlistButtons = document.querySelectorAll(".wishlist-btn");
+
+console.log("Wishlist Buttons:", wishlistButtons.length);
+
+wishlistButtons.forEach(button => {
+
+    button.addEventListener("click", async () => {
+
+        const user = auth.currentUser;
+
+        if (!user) {
+
+            showToast("Please login first ❤️");
+
+            setTimeout(() => {
+                window.location.href = "Login.html";
+            }, 1500);
+
+            return;
+
+        }
+
+
+        const card = button.closest(".product-card");
+
+
+        const product = {
+
+            id: card.dataset.id,
+            name: card.dataset.name,
+            price: Number(card.dataset.price),
+            category: card.dataset.category,
+            image: card.dataset.image
+
+        };
+
+
+        try {
+
+            await set(
+                ref(database, 
+                `wishlist/${user.uid}/${product.id}`),
+                product
+            );
+
+
+            button.innerHTML = `
+            <i class="fa-solid fa-heart"></i>
+            `;
+
+
+            showToast(product.name + " added to wishlist ❤️");
+
+
+        } catch(error) {
+
+            console.error(error);
+
+            showToast("❌ Wishlist failed!");
+
+        }
+
+
+    });
+
+});

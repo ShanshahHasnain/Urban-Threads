@@ -64,7 +64,7 @@ onAuthStateChanged(auth, (user) => {
 
     if (user) {
         loginBtn.textContent = user.displayName || "Profile";
-        dropdownMenu.style.display = "";
+        dropdownMenu.style.display = "none";
     } else {
         loginBtn.innerHTML = `<i class="fa-solid fa-user"></i> Login`;
         dropdownMenu.style.display = "none";
@@ -104,3 +104,29 @@ if (logoutBtn) {
 
 window.showToast = showToast;
 window.updateCartCount = updateCartCount;
+
+const loginBtn = document.getElementById("loginBtn");
+
+if (loginBtn) {
+
+    loginBtn.addEventListener("click", () => {
+
+        if (auth.currentUser) {
+
+            const dropdownMenu = document.getElementById("dropdownMenu");
+
+            if (dropdownMenu.style.display === "block") {
+                dropdownMenu.style.display = "none";
+            } else {
+                dropdownMenu.style.display = "block";
+            }
+
+        } else {
+
+            window.location.href = "Login.html";
+
+        }
+
+    });
+
+}

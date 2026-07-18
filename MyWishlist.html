@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Threads - My Wishlist</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="MyWishlist.css">
+</head>
+
+<body>
+    <header class="header-position">
+        <!-- Logo -->
+        <div class="logo">
+            <h1>Ur<span><i>ba</i></span>n Thr<span><i>ea</i></span>ds</h1>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Buttons -->
+        <div class="button">
+
+            <a href="Cart.html">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    Cart (<span id="cartCount">0</span>)
+                </button>
+            </a>
+
+            <div class="user-menu">
+
+                <button class="login-btn" id="loginBtn">
+                    <i class="fa-solid fa-user"></i> Login
+                </button>
+
+                <div class="dropdown-menu" id="dropdownMenu">
+
+                    <a href="MyProfile.html">👤 My Profile</a>
+
+                    <a href="MyOrders.html">📦 My Orders</a>
+
+                    <button id="logoutBtn">
+                        🚪 Logout
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ================= Checkout Banner ================= -->
+
+    <section class="checkout-banner">
+        <div class="checkout-banner-content">
+            <h4>URBAN THREADS</h4>
+            <h1>My Wishlist</h1>
+            <p>
+
+            </p>
+            <div class="breadcrumb">
+                <a href="Home.html">Home</a>
+                <span>/</span>
+                <p>My Wishlist</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="wishlist">
+
+        <div class="wishlist-container">
+
+            <h2>My Wishlist</h2>
+
+            <div id="wishlistProducts"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= Footer ================= -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Logo & About -->
+            <div class="footer-box">
+                <h2>Urban Threads</h2>
+                <p>
+                    Discover premium fashion designed for comfort, confidence, and everyday style.
+                </p>
+            </div>
+            <!-- Quick Links -->
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Shop.html">Shop</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Customer Care -->
+            <div class="footer-box">
+                <h3>Customer Care</h3>
+                <ul>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <!-- Contact -->
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-envelope"></i> info@urbanthreads.com</p>
+                <p><i class="fa-solid fa-phone"></i> +92 300 1234567</p>
+                <p><i class="fa-solid fa-location-dot"></i> Karachi, Pakistan</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Urban Threads. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+    <script type="module" src="Common.js"></script>
+    <script type="module" src="MyWishlist.js"></script>
+</body>
+
+</html>

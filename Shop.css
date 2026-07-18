@@ -398,28 +398,42 @@ body {
     background:#d62828;
 }
 
-.wishlist{
+.wishlist-btn{
     position:absolute;
     top:15px;
     right:15px;
     width:42px;
     height:42px;
     background:#fff;
+    border:none;
     border-radius:50%;
     display:flex;
     justify-content:center;
     align-items:center;
     cursor:pointer;
     box-shadow:0 5px 15px rgba(0,0,0,.15);
-    transition:.3s;
+    transition:.3s ease;
+    z-index:5;
 }
 
-.wishlist:hover{
-    background:#FFD166;
+.wishlist-btn i{
+    color:#111;
+    font-size:18px;
+    transition:.3s ease;
+}
+
+.wishlist-btn:hover{
+    background:#111;
+    transform:scale(1.1);
+}
+
+.wishlist-btn:hover i{
+    color:#FFD166;
 }
 
 .product-content{
     padding:25px;
+    position: relative;
 }
 
 .product-content h3{
