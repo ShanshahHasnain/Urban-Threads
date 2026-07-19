@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Urban Threads - Admin Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="AdminDashboard.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="admin-header">
+
+    <div class="admin-logo">
+
+        <h1>
+            Urban Threads
+            <span>Admin</span>
+        </h1>
+
+    </div>
+
+
+    <button id="logoutAdminBtn">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Logout
+
+    </button>
+
+
+</header>
+
+
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="admin-container">
+
+
+<aside class="sidebar">
+
+
+    <ul>
+
+        <li class="active">
+
+            <i class="fa-solid fa-chart-line"></i>
+            Dashboard
+
+        </li>
+
+
+        <li>
+
+            <i class="fa-solid fa-box"></i>
+            Orders
+
+        </li>
+
+
+        <li>
+
+            <i class="fa-solid fa-users"></i>
+            Users
+
+        </li>
+
+
+        <li>
+
+            <i class="fa-solid fa-star"></i>
+            Reviews
+
+        </li>
+
+
+        <li>
+
+            <i class="fa-solid fa-shirt"></i>
+            Products
+
+        </li>
+
+
+    </ul>
+
+
+</aside>
+
+
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+
+<main class="dashboard">
+
+
+    <h2>
+        Welcome Admin
+    </h2>
+
+
+    <p class="dashboard-subtitle">
+        Manage your Urban Threads store from here.
+    </p>
+
+
+
+    <!-- Cards -->
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <i class="fa-solid fa-users"></i>
+
+            <h3>
+                Total Users
+            </h3>
+
+            <p id="totalUsers">
+                0
+            </p>
+
+        </div>
+
+
+
+
+        <div class="card">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <h3>
+                Total Orders
+            </h3>
+
+            <p id="totalOrders">
+                0
+            </p>
+
+        </div>
+
+
+
+
+
+        <div class="card">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h3>
+                Pending Orders
+            </h3>
+
+            <p id="pendingOrders">
+                0
+            </p>
+
+        </div>
+
+
+
+
+
+        <div class="card">
+
+            <i class="fa-solid fa-dollar-sign"></i>
+
+            <h3>
+                Revenue
+            </h3>
+
+            <p id="totalRevenue">
+                $0
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <!-- Recent Orders -->
+
+
+    <section class="recent-orders">
+
+
+        <h2>
+            Recent Orders
+        </h2>
+
+
+
+        <table>
+
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Order ID
+                    </th>
+
+                    <th>
+                        Customer
+                    </th>
+
+                    <th>
+                        Status
+                    </th>
+
+                    <th>
+                        Total
+                    </th>
+
+
+                </tr>
+
+
+            </thead>
+
+
+
+            <tbody id="ordersTable">
+
+
+                <!-- Firebase Data -->
+
+
+            </tbody>
+
+
+
+        </table>
+
+
+    </section>
+
+
+
+
+</main>
+
+
+</div>
+
+
+
+
+<script type="module" src="AdminDashboard.js"></script>
+
+
+</body>
+
+</html>

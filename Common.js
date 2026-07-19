@@ -18,13 +18,10 @@ const dropdownMenu = document.getElementById("dropdownMenu");
 function updateCartCount() {
 
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
     const totalItems = cart.reduce((total, product) => {
         return total + product.quantity;
     }, 0);
-
     const cartCount = document.getElementById("cartCount");
-
     if (cartCount) {
         cartCount.textContent = totalItems;
     }
@@ -62,12 +59,53 @@ onAuthStateChanged(auth, (user) => {
 
     if (!loginBtn) return;
 
+
     if (user) {
+
         loginBtn.textContent = user.displayName || "Profile";
+
+
         dropdownMenu.style.display = "none";
+
+
+        // ===============================
+        // Admin Panel Access
+        // ===============================
+
+        const adminPanel = document.getElementById("adminPanelLink");
+
+
+        if (adminPanel) {
+
+            if (user.email === "admin@urbanthreads.com") {
+
+                adminPanel.style.display = "block";
+
+            } else {
+
+                adminPanel.style.display = "none";
+
+            }
+
+        }
+
+
     } else {
+
+
         loginBtn.innerHTML = `<i class="fa-solid fa-user"></i> Login`;
+
         dropdownMenu.style.display = "none";
+
+
+        const adminPanel = document.getElementById("adminPanelLink");
+
+        if(adminPanel){
+
+            adminPanel.style.display = "none";
+
+        }
+
     }
 
 });
@@ -75,58 +113,38 @@ onAuthStateChanged(auth, (user) => {
 const logoutBtn = document.getElementById("logoutBtn");
 
 if (logoutBtn) {
-
     logoutBtn.addEventListener("click", async () => {
-
         try {
-
             await signOut(auth);
-
-            showToast("👋 Logged out successfully!");
-
+            showToast("Logged out successfully!");
             setTimeout(() => {
-
                 window.location.href = "Login.html";
-
             }, 1500);
-
         } catch (error) {
-
-            showToast("❌ Logout failed!");
-
+            showToast("Logout failed!");
             console.error(error);
-
         }
-
     });
-
 }
 
 window.showToast = showToast;
 window.updateCartCount = updateCartCount;
 
+
+
 const loginBtn = document.getElementById("loginBtn");
 
 if (loginBtn) {
-
     loginBtn.addEventListener("click", () => {
-
         if (auth.currentUser) {
-
             const dropdownMenu = document.getElementById("dropdownMenu");
-
             if (dropdownMenu.style.display === "block") {
                 dropdownMenu.style.display = "none";
             } else {
                 dropdownMenu.style.display = "block";
             }
-
         } else {
-
             window.location.href = "Login.html";
-
         }
-
     });
-
 }

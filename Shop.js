@@ -214,3 +214,23 @@ wishlistButtons.forEach(button => {
     });
 
 });
+
+// ===============================
+// Product Details
+// ===============================
+
+const viewButtons = document.querySelectorAll(".view-btn");
+
+viewButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const card = button.closest(".product-card");
+
+        const productId = card.dataset.id;
+
+        window.location.href = `ProductDetails.html?id=${productId}`;
+
+    });
+
+});

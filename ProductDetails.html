@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Threads - Register</title>
+    <title>Urban Threads - Product Detail</title>
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="Register.css">
+    <link rel="stylesheet" href="ProductDetails.css">
 </head>
 
 <body>
@@ -53,95 +54,135 @@
         </div>
     </header>
 
-    <!-- ================= Register Banner ================= -->
+    <!-- ================= Checkout Banner ================= -->
 
-<section class="register-banner">
-    <div class="register-banner-content">
-        <h4>URBAN THREADS</h4>
-        <h1>Create Account</h1>
-        <p>Join Urban Threads and start your fashion journey.</p>
-    </div>
-</section>
+    <section class="checkout-banner">
+        <div class="checkout-banner-content">
+            <h4>URBAN THREADS</h4>
+            <h1>PRODUCT DETAIL</h1>
+            <p>
 
-<!-- ================= Register ================= -->
-
-<section class="register">
-    <div class="register-container">
-        <h2>Create Your Account</h2>
-        <p>Fill in your details to get started.</p>
-        <form id="registerForm">
-            <div class="form-row">
-                <input
-                    type="text"
-                    id="firstName"
-                    placeholder="First Name"
-                    required
-                >
-                <input
-                    type="text"
-                    id="lastName"
-                    placeholder="Last Name"
-                    required
-                >
+            </p>
+            <div class="breadcrumb">
+                <a href="Home.html">Home</a>
+                <span>/</span>
+                <p>Product Detail</p>
             </div>
-            <input
-                type="email"
-                id="email"
-                placeholder="Email Address"
-                required
-            >
-            <input
-                type="tel"
-                id="phone"
-                placeholder="Phone Number"
-                required
-            >
-            <div class="password-box">
-                <input
-                    type="password"
-                    id="password"
-                    placeholder="Password"
-                    required
-                >
-                <i class="fa-solid fa-eye" id="togglePassword"></i>
-            </div>
-            <div class="password-box">
-                <input
-                    type="password"
-                    id="confirmPassword"
-                    placeholder="Confirm Password"
-                    required
-                >
-                <i class="fa-solid fa-eye" id="toggleConfirmPassword"></i>
-            </div>
-            <label class="terms">
-                <input
-                    type="checkbox"
-                    id="terms"
-                    required
-                >
-                I agree to the Terms & Conditions
-            </label>
-            <button type="submit">
-                Create Account
-            </button>
-        </form>
-        <div class="divider">
-            <span>OR</span>
         </div>
-        <button class="google-btn">
-            <i class="fa-brands fa-google"></i>
-            Continue with Google
-        </button>
-        <p class="register-link">
-            Already have an account?
-            <a href="Login.html">
-                Login
-            </a>
-        </p>
-    </div>
-</section>
+    </section>
+    <section class="product-details">
+        <div class="product-container">
+            <div class="product-image">
+                <img id="productImage" src="" alt="">
+                <div class="product-gallery">
+                    <img class="thumb active-thumb" src="images/product2.jpg">
+                    <img class="thumb" src="images/product4.jpg">
+                    <img class="thumb" src="images/product3.jpg">
+                </div>
+            </div>
+            <div class="product-info">
+                <h1 id="productName">Product Name</h1>
+                <p class="product-price" id="productPrice">$0.00</p>
 
+                <!-- Size Selection -->
+                <div class="size-box">
+                    <h3>Size:</h3>
+                    <button>S</button>
+                    <button>M</button>
+                    <button>L</button>
+                    <button>XL</button>
+                </div>
+
+                <!-- Color Selection -->
+                <div class="color-box">
+                    <h3>Color:</h3>
+                    <button class="color black"></button>
+                    <button class="color white"></button>
+                    <button class="color blue"></button>
+                </div>
+                <p class="product-description" id="productDescription">
+                    Product description will appear here.
+                </p>
+                <div class="quantity-box">
+                    <button id="minusBtn">-</button>
+                    <span id="quantity">1</span>
+                    <button id="plusBtn">+</button>
+                </div>
+                <div class="action-buttons">
+                    <button class="add-cart-btn" id="addCartBtn">
+                        Add to Cart
+                    </button>
+                    <button class="wishlist-btn" id="wishlistBtn">
+                        ❤️ Wishlist
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Reviews ================= -->
+
+    <section class="reviews-section">
+
+        <h2>Customer Reviews</h2>
+
+        <div class="review-form">
+
+            <h3>Write a Review</h3>
+
+            <div class="rating-stars">
+
+                <i class="fa-solid fa-star star" data-rating="1"></i>
+
+                <i class="fa-solid fa-star star" data-rating="2"></i>
+
+                <i class="fa-solid fa-star star" data-rating="3"></i>
+
+                <i class="fa-solid fa-star star" data-rating="4"></i>
+
+                <i class="fa-solid fa-star star" data-rating="5"></i>
+
+            </div>
+
+            <textarea id="reviewText" placeholder="Share your experience about this product..."></textarea>
+
+            <button id="submitReviewBtn">
+                Submit Review
+            </button>
+
+        </div>
+
+        <div class="reviews-summary">
+
+            <h3>
+
+                Average Rating:
+
+                <span id="averageRating">
+                    0.0
+                </span>
+
+                ⭐
+
+            </h3>
+
+            <p>
+
+                <span id="totalReviews">
+                    0
+                </span>
+
+                Reviews
+
+            </p>
+
+        </div>
+
+        <div id="reviewsContainer">
+
+        </div>
+
+    </section>
 
     <!-- ================= Footer ================= -->
 
@@ -196,7 +237,7 @@
 
     <div id="toast" class="toast"></div>
     <script type="module" src="Common.js"></script>
-    <script type="module" src="Register.js"></script>
+    <script type="module" src="ProductDetails.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,343 @@
+/* ===============================
+   Urban Threads - Admin Orders CSS
+=============================== */
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+body{
+
+    background:#f5f5f5;
+    color:#333;
+
+}
+
+
+
+/* ===============================
+        Header
+=============================== */
+
+
+.admin-header{
+
+    height:80px;
+
+    background:linear-gradient(90deg,#130101,#3b1814);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 40px;
+
+    color:white;
+
+}
+
+
+
+.admin-logo h1{
+
+    font-size:30px;
+
+}
+
+
+
+.admin-logo span{
+
+    color:#FFD166;
+
+    font-size:22px;
+
+}
+
+
+
+.admin-header button{
+
+    background:#FFD166;
+
+    color:#111;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+.admin-header button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+
+/* ===============================
+        Orders Section
+=============================== */
+
+
+.orders-container{
+
+    padding:40px;
+
+}
+
+
+
+.orders-container h2{
+
+    font-size:32px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.subtitle{
+
+    color:#777;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+/* ===============================
+        Table Box
+=============================== */
+
+
+.orders-table-box{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    overflow-x:auto;
+
+}
+
+
+
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+
+thead{
+
+    background:#130101;
+
+    color:white;
+
+}
+
+
+
+th,td{
+
+    padding:15px;
+
+    text-align:left;
+
+}
+
+
+
+tbody tr{
+
+    border-bottom:1px solid #ddd;
+
+}
+
+
+
+tbody tr:hover{
+
+    background:#fafafa;
+
+}
+
+
+
+/* ===============================
+        Status
+=============================== */
+
+
+.status{
+
+    padding:7px 15px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+
+.pending{
+
+    background:#fff3cd;
+
+    color:#856404;
+
+}
+
+
+
+.confirmed{
+
+    background:#cfe2ff;
+
+    color:#084298;
+
+}
+
+
+
+.shipped{
+
+    background:#d1e7dd;
+
+    color:#0f5132;
+
+}
+
+
+
+.delivered{
+
+    background:#d1f7d6;
+
+    color:#146c43;
+
+}
+
+
+
+
+/* ===============================
+        Action Button
+=============================== */
+
+
+.update-btn{
+
+    background:#ff6b35;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 15px;
+
+    border-radius:7px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+
+
+.update-btn:hover{
+
+    background:#130101;
+
+}
+
+
+
+
+
+/* ===============================
+        Select
+=============================== */
+
+
+.status-select{
+
+    padding:8px;
+
+    border-radius:6px;
+
+    border:1px solid #ddd;
+
+}
+
+
+
+
+/* Responsive */
+
+@media(max-width:700px){
+
+
+.orders-container{
+
+    padding:20px;
+
+}
+
+
+}
+
+.view-btn{
+
+    background:#130101;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:7px;
+    cursor:pointer;
+    margin-right:10px;
+    font-weight:600;
+
+}
+
+.view-btn:hover{
+
+    background:#ff6b35;
+
+}
