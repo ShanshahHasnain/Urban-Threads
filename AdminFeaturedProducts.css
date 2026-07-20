@@ -1,0 +1,125 @@
+/* ===============================
+   Urban Threads Admin
+   Featured Products
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:#f5f5f5;
+
+    padding:40px;
+
+}
+
+h1{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    color:#111;
+
+}
+
+.table-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    background:#fff;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:#111;
+
+    color:white;
+
+}
+
+th{
+
+    padding:16px;
+
+    text-align:left;
+
+}
+
+td{
+
+    padding:16px;
+
+    border-bottom:1px solid #eee;
+
+    vertical-align:middle;
+
+}
+
+tbody tr:hover{
+
+    background:#fafafa;
+
+}
+
+.product-image{
+
+    width:70px;
+
+    height:70px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+}
+
+.featured-toggle{
+
+    width:22px;
+
+    height:22px;
+
+    cursor:pointer;
+
+    accent-color:black;
+
+}
+
+@media(max-width:900px){
+
+.table-container{
+
+overflow-x:auto;
+
+}
+
+table{
+
+min-width:900px;
+
+}
+
+}

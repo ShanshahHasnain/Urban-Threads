@@ -1,167 +1,228 @@
 // ===============================
-// Urban Threads - AdminOrders.js
+// Urban Threads Admin Orders
 // ===============================
 
-import { auth, database } from "./Firebase.js";
+
+import { database } from "./Firebase.js";
+
 
 import {
-    onAuthStateChanged
-} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js";
 
-import {
     ref,
     get,
     update
+
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-database.js";
 
-const ADMIN_EMAIL = "admin@urbanthreads.com";
 
-// ===============================
-// Admin Security
-// ===============================
 
-onAuthStateChanged(auth, (user) => {
+const ordersTable =
+    document.getElementById("ordersTable");
 
-    if (!user || user.email !== ADMIN_EMAIL) {
 
-        alert("Access Denied!");
-
-        window.location.href = "Home.html";
-
-        return;
-
-    }
-
-    loadOrders();
-
-});
 
 // ===============================
 // Load Orders
 // ===============================
 
+
 async function loadOrders() {
 
-    const table = document.getElementById("ordersTable");
 
-    table.innerHTML = "";
+    const snapshot =
+        await get(
+            ref(database, "orders")
+        );
 
-    const snapshot = await get(ref(database, "orders"));
+
+
+    ordersTable.innerHTML = "";
+
+
 
     if (!snapshot.exists()) {
 
-        table.innerHTML = `
-        <tr>
-            <td colspan="6">No Orders Found</td>
-        </tr>
-        `;
+
+        ordersTable.innerHTML =
+            `
+<tr>
+
+<td colspan="6">
+No Orders Found
+</td>
+
+</tr>
+`;
 
         return;
 
+
     }
 
-    const orders = snapshot.val();
 
-    Object.entries(orders).forEach(([orderId, order]) => {
 
-        const row = document.createElement("tr");
+    const orders =
+        snapshot.val();
 
-        row.innerHTML = `
 
-        <td>${orderId.slice(-6)}</td>
 
-        <td>
-            ${order.firstName} ${order.lastName}
-            <br>
-            <small>${order.email}</small>
-        </td>
+    Object.entries(orders)
+        .reverse()
+        .forEach(([id, order]) => {
 
-        <td>${order.products.length} Item(s)</td>
 
-        <td>$${order.total}</td>
+            ordersTable.innerHTML += `
 
-        <td>
 
-            <select class="status-select" data-id="${orderId}">
+<tr>
 
-                <option value="Pending" ${order.status == "Pending" ? "selected" : ""}>
-                    Pending
-                </option>
 
-                <option value="Confirmed" ${order.status == "Confirmed" ? "selected" : ""}>
-                    Confirmed
-                </option>
+<td>
+${id}
+</td>
 
-                <option value="Shipped" ${order.status == "Shipped" ? "selected" : ""}>
-                    Shipped
-                </option>
 
-                <option value="Delivered" ${order.status == "Delivered" ? "selected" : ""}>
-                    Delivered
-                </option>
 
-            </select>
+<td>
+${order.customerName || "Unknown"}
+</td>
 
-        </td>
 
-        <td>
 
-    <button
-        class="view-btn"
-        onclick="window.location.href='OrderDetails.html?id=${orderId}'">
+<td>
+${order.products.length} Item(s)
+</td>
 
-        View
 
-    </button>
 
-    <button
-        class="update-btn"
-        data-id="${orderId}">
+<td>
+PKR ${Number(order.totalAmount || order.total || 0).toLocaleString()}
+</td>
 
-        Update
 
-    </button>
+
+<td>
+
+<select id="status-${id}">
+
+<option ${order.status == "Pending" ? "selected" : ""}>
+Pending
+</option>
+
+
+<option ${order.status == "Confirmed" ? "selected" : ""}>
+Confirmed
+</option>
+
+
+<option ${order.status == "Shipped" ? "selected" : ""}>
+Shipped
+</option>
+
+
+<option ${order.status == "Delivered" ? "selected" : ""}>
+Delivered
+</option>
+
+
+</select>
+
 
 </td>
 
-        `;
 
-        table.appendChild(row);
 
-    });
 
-    addUpdateEvents();
+<td>
+
+<button onclick="viewOrder('${id}')">
+View
+</button>
+
+
+<button onclick="updateStatus('${id}')">
+Update
+</button>
+
+
+</td>
+
+
+
+</tr>
+
+
+`;
+
+
+        });
+
+
+}
+
+
+
+loadOrders();
+
+// ===============================
+// Update Order Status
+// ===============================
+
+
+window.updateStatus = async function (orderId) {
+
+
+    const status =
+        document.getElementById(`status-${orderId}`).value;
+
+
+
+    try {
+
+
+        await update(
+            ref(database, `orders/${orderId}`),
+            {
+                status: status
+            }
+        );
+
+
+
+        alert("Order status updated ✅");
+
+
+        loadOrders();
+
+
+
+    }
+
+
+    catch (error) {
+
+
+        console.error(error);
+
+
+        alert("Status update failed ❌");
+
+
+    }
+
 
 }
 
 // ===============================
-// Update Status
+// View Order Details
 // ===============================
 
-function addUpdateEvents() {
 
-    const buttons = document.querySelectorAll(".update-btn");
+window.viewOrder = function(orderId){
 
-    buttons.forEach(button => {
 
-        button.addEventListener("click", async () => {
+    window.location.href =
+    `AdminOrderDetails.html?id=${orderId}`;
 
-            const id = button.dataset.id;
-
-            const status = document.querySelector(
-                `.status-select[data-id="${id}"]`
-            ).value;
-
-            await update(ref(database, `orders/${id}`), {
-
-                status: status
-
-            });
-
-            alert("Order Updated Successfully ✅");
-
-        });
-
-    });
 
 }

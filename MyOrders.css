@@ -309,6 +309,28 @@ body {
     color:#B02A37;
 }
 
+.receipt-box{
+    margin-top:15px;
+}
+
+.receipt-image{
+    width:180px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.receipt-image:hover{
+    transform:scale(1.05);
+}
+
+.receipt-note{
+    font-size:14px;
+    color:#777;
+    margin-top:8px;
+}
+
 /* ===========================
    Footer
 =========================== */

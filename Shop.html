@@ -50,6 +50,7 @@
                 <div class="dropdown-menu" id="dropdownMenu">
                     <a href="MyProfile.html">My Profile</a>
                     <li><a href="MyOrders.html">My Orders</a></li>
+                    <li><a href="MyWishlist.html">My Wishlist</a></li>
                     <button id="logoutBtn">
                         Logout
                     </button>
@@ -80,10 +81,10 @@
         <input type="text" id="searchBox" placeholder="Search products...">
         <select id="categoryFilter">
             <option value="all">All Categories</option>
-            <option value="tshirt">T-Shirts</option>
-            <option value="hoodie">Hoodies</option>
-            <option value="jeans">Jeans</option>
-            <option value="jacket">Jackets</option>
+            <option value="T-Shirts">T-Shirts</option>
+            <option value="Hoodies">Hoodies</option>
+            <option value="Jeans">Jeans</option>
+            <option value="Jackets">Jackets</option>
         </select>
 
         <select id="sortProducts">
@@ -95,99 +96,8 @@
 
     <!-- ================= Shop Products ================= -->
     <section class="shop-products">
-        <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product-card" data-image="images/product1.jpg" data-id="1" data-category="tshirt"
-                data-price="29.99" data-name="Oversized T-Shirt">
-                <span class="product-badge">NEW</span>
-                <button class="wishlist-btn">
-                    <i class="fa-regular fa-heart"></i>
-                </button>
-                <img src="images/product1.jpg" alt="Oversized T-Shirt">
-                <div class="product-content">
-                    <h3>Oversized T-Shirt</h3>
-                    <div class="rating">
-                        ★★★★★
-                    </div>
-                    <div class="price">
-                        <span class="new-price">$29.99</span>
-                        <span class="old-price">$39.99</span>
-                    </div>
-                    <div class="product-buttons">
-                        <button class="cart-btn">Add to Cart</button>
-                        <button class="view-btn">Quick View</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Product 2 -->
-            <div class="product-card" data-id="2" data-image="images/product2.jpg" data-category="tshirt"
-                data-price="34.99" data-name="Casual Shirt">
-                <span class="product-badge sale">SALE</span>
-                <button class="wishlist-btn">
-                    <i class="fa-regular fa-heart"></i>
-                </button>
-                <img src="images/product2.jpg" alt="Casual Shirt">
-                <div class="product-content">
-                    <h3>Casual Shirt</h3>
-                    <div class="rating">
-                        ★★★★☆
-                    </div>
-                    <div class="price">
-                        <span class="new-price">$34.99</span>
-                        <span class="old-price">$45.99</span>
-                    </div>
-                    <div class="product-buttons">
-                        <button class="cart-btn">Add to Cart</button>
-                        <button class="view-btn">Quick View</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Product 3 -->
-            <div class="product-card" data-id="3" data-image="images/product3.jpg" data-category="hoodie"
-                data-price="49.99" data-name="Premium Hoodie">
-                <span class="product-badge">HOT</span>
-                <button class="wishlist-btn">
-                    <i class="fa-regular fa-heart"></i>
-                </button>
-                <img src="images/product3.jpg" alt="Premium Hoodie">
-                <div class="product-content">
-                    <h3>Premium Hoodie</h3>
-                    <div class="rating">
-                        ★★★★★
-                    </div>
-                    <div class="price">
-                        <span class="new-price">$49.99</span>
-                        <span class="old-price">$65.99</span>
-                    </div>
-                    <div class="product-buttons">
-                        <button class="cart-btn">Add to Cart</button>
-                        <button class="view-btn">Quick View</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Product 4 -->
-            <div class="product-card" data-id="4" data-image="images/product4.jpg" data-category="jeans"
-                data-price="44.99" data-name="Denim Jeans">
-                <span class="product-badge">NEW</span>
-                <button class="wishlist-btn">
-                    <i class="fa-regular fa-heart"></i>
-                </button>
-                <img src="images/product4.jpg" alt="Denim Jeans">
-                <div class="product-content">
-                    <h3>Denim Jeans</h3>
-                    <div class="rating">
-                        ★★★★☆
-                    </div>
-                    <div class="price">
-                        <span class="new-price">$44.99</span>
-                        <span class="old-price">$59.99</span>
-                    </div>
-                    <div class="product-buttons">
-                        <button class="cart-btn">Add to Cart</button>
-                        <button class="view-btn">Quick View</button>
-                    </div>
-                </div>
-            </div>
+        <div class="products-grid" id="productsGrid">
+
         </div>
     </section>
 

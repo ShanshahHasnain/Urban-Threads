@@ -1,105 +1,22 @@
 /* ===============================
-   Urban Threads - Admin Orders CSS
-=============================== */
+   Urban Threads Admin Orders CSS
+================================ */
 
 
 *{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
+
 }
+
 
 
 body{
 
     background:#f5f5f5;
-    color:#333;
-
-}
-
-
-
-/* ===============================
-        Header
-=============================== */
-
-
-.admin-header{
-
-    height:80px;
-
-    background:linear-gradient(90deg,#130101,#3b1814);
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:0 40px;
-
-    color:white;
-
-}
-
-
-
-.admin-logo h1{
-
-    font-size:30px;
-
-}
-
-
-
-.admin-logo span{
-
-    color:#FFD166;
-
-    font-size:22px;
-
-}
-
-
-
-.admin-header button{
-
-    background:#FFD166;
-
-    color:#111;
-
-    border:none;
-
-    padding:12px 25px;
-
-    border-radius:8px;
-
-    cursor:pointer;
-
-    font-weight:600;
-
-    transition:.3s;
-
-}
-
-
-
-.admin-header button:hover{
-
-    transform:translateY(-3px);
-
-}
-
-
-
-
-/* ===============================
-        Orders Section
-=============================== */
-
-
-.orders-container{
 
     padding:40px;
 
@@ -107,62 +24,52 @@ body{
 
 
 
-.orders-container h2{
+/* Heading */
+
+h1{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    color:#111;
 
     font-size:32px;
 
-    margin-bottom:10px;
-
 }
-
-
-
-.subtitle{
-
-    color:#777;
-
-    margin-bottom:30px;
-
-}
-
 
 
 
 /* ===============================
-        Table Box
-=============================== */
-
-
-.orders-table-box{
-
-    background:white;
-
-    padding:25px;
-
-    border-radius:15px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-    overflow-x:auto;
-
-}
-
-
+   Table Container
+================================ */
 
 
 table{
 
     width:100%;
 
+    background:white;
+
     border-collapse:collapse;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.1);
 
 }
 
 
 
+/* Table Head */
+
+
 thead{
 
-    background:#130101;
+    background:#111;
 
     color:white;
 
@@ -170,11 +77,29 @@ thead{
 
 
 
-th,td{
+th{
+
+    padding:16px;
+
+    text-align:left;
+
+    font-size:15px;
+
+}
+
+
+
+/* Table Body */
+
+
+td{
 
     padding:15px;
 
-    text-align:left;
+    border-bottom:
+    1px solid #eee;
+
+    color:#333;
 
 }
 
@@ -182,7 +107,7 @@ th,td{
 
 tbody tr{
 
-    border-bottom:1px solid #ddd;
+    transition:0.3s;
 
 }
 
@@ -197,79 +122,48 @@ tbody tr:hover{
 
 
 /* ===============================
-        Status
-=============================== */
+   Status Dropdown
+================================ */
 
 
-.status{
+select{
 
-    padding:7px 15px;
+    padding:8px 12px;
 
-    border-radius:20px;
+    border-radius:6px;
 
-    font-size:14px;
+    border:1px solid #ddd;
 
-    font-weight:600;
+    cursor:pointer;
 
-}
-
-
-
-.pending{
-
-    background:#fff3cd;
-
-    color:#856404;
+    outline:none;
 
 }
 
 
 
-.confirmed{
+select:focus{
 
-    background:#cfe2ff;
-
-    color:#084298;
+    border-color:#111;
 
 }
-
-
-
-.shipped{
-
-    background:#d1e7dd;
-
-    color:#0f5132;
-
-}
-
-
-
-.delivered{
-
-    background:#d1f7d6;
-
-    color:#146c43;
-
-}
-
 
 
 
 /* ===============================
-        Action Button
-=============================== */
+   Update Button
+================================ */
 
 
-.update-btn{
+button{
 
-    background:#ff6b35;
+    padding:9px 18px;
+
+    background:#111;
 
     color:white;
 
     border:none;
-
-    padding:8px 15px;
 
     border-radius:7px;
 
@@ -277,67 +171,72 @@ tbody tr:hover{
 
     font-weight:600;
 
-}
-
-
-
-.update-btn:hover{
-
-    background:#130101;
+    transition:0.3s;
 
 }
 
 
+
+button:hover{
+
+    background:#333;
+
+    transform:translateY(-2px);
+
+}
 
 
 
 /* ===============================
-        Select
-=============================== */
+   Empty Orders
+================================ */
 
 
-.status-select{
+td[colspan="6"]{
 
-    padding:8px;
+    text-align:center;
 
-    border-radius:6px;
+    padding:40px;
 
-    border:1px solid #ddd;
+    font-size:18px;
+
+    color:#777;
 
 }
 
 
 
+/* ===============================
+   Mobile Responsive
+================================ */
 
-/* Responsive */
 
-@media(max-width:700px){
+@media(max-width:768px){
 
 
-.orders-container{
+body{
 
     padding:20px;
 
 }
 
 
-}
+table{
 
-.view-btn{
+    display:block;
 
-    background:#130101;
-    color:white;
-    border:none;
-    padding:8px 15px;
-    border-radius:7px;
-    cursor:pointer;
-    margin-right:10px;
-    font-weight:600;
+    overflow-x:auto;
 
 }
 
-.view-btn:hover{
 
-    background:#ff6b35;
+
+h1{
+
+    font-size:25px;
+
+}
+
+
 
 }

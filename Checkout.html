@@ -1,198 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Threads - Checkout</title>
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <!-- CSS -->
+
+    <title>
+        Checkout - Urban Threads
+    </title>
+
     <link rel="stylesheet" href="Checkout.css">
+
 </head>
+
+
 <body>
-    <header class="header-position">
-    <!-- Logo -->
-    <div class="logo">
-        <h1>Ur<span><i>ba</i></span>n Thr<span><i>ea</i></span>ds</h1>
-    </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="Shop.html">Shop</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-        </ul>
-    </nav>
 
-    <!-- Buttons -->
-        <div class="button">
-            <a href="Cart.html">
-                <button class="cart-btn" id="cartBtn">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                    Cart (<span id="cartCount">0</span>)
-                </button>
-            </a>
-            <div class="user-menu">
-                <button class="login-btn" id="loginBtn">
-                    <i class="fa-solid fa-user"></i> Login
-                </button>
-                <div class="dropdown-menu" id="dropdownMenu">
-                    <a href="MyProfile.html">My Profile</a>
-                    <a href="MyOrders.html">My Orders</a>
-                    <button id="logoutBtn">
-                        Logout
-                    </button>
-                </div>
-            </div>
-        </div>
-</header>
+    <h1>
+        Checkout
+    </h1>
 
-<!-- ================= Checkout Banner ================= -->
 
-<section class="checkout-banner">
-    <div class="checkout-banner-content">
-        <h4>URBAN THREADS</h4>
-        <h1>Checkout</h1>
-        <p>
-            Complete your order by filling in your billing details.
-        </p>
-        <div class="breadcrumb">
-            <a href="Home.html">Home</a>
-            <span>/</span>
-            <a href="Cart.html">Cart</a>
-            <span>/</span>
-            <p>Checkout</p>
-        </div>
-    </div>
-</section>
+    <div class="checkout-box">
 
-<!-- ================= Checkout ================= -->
 
-<section class="checkout">
-    <div class="checkout-container">
-        <!-- Billing Details -->
-        <div class="billing-details">
-            <h2>Billing Details</h2>
-            <form id="checkoutForm">
-                <div class="form-row">
-                    <input type="text" placeholder="First Name" required>
-                    <input type="text" placeholder="Last Name" required>
-                </div>
-                <input type="email" placeholder="Email Address" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <div class="form-row">
-                    <input type="text" placeholder="Country" required>
-                    <input type="text" placeholder="City" required>
-                </div>
-                <div class="form-row">
-                    <input type="text" placeholder="Postal Code" required>
-                    <input type="text" placeholder="Street Address" required>
-                </div>
-                <h3>Payment Method</h3>
-                <label>
-                    <input type="radio" name="payment" checked>
-                    Cash on Delivery
-                </label>
-                <label>
-                    <input type="radio" name="payment">
-                    Credit / Debit Card
-                </label>
-                <label>
-                    <input type="radio" name="payment">
-                    EasyPaisa
-                </label>
-                <label>
-                    <input type="radio" name="payment">
-                    JazzCash
-                </label>
-            </form>
+        <input id="customerName" placeholder="Full Name">
+
+
+        <input id="customerPhone" placeholder="Phone Number">
+
+
+        <textarea id="customerAddress" placeholder="Complete Address">
+</textarea>
+
+
+
+        <h3>
+            Order Summary
+        </h3>
+
+
+        <div id="orderSummary">
+
         </div>
 
-        <!-- Order Summary -->
-        <div class="order-summary">
-            <h2>Order Summary</h2>
-            <div id="checkoutItems">
-            </div>
-            <div class="summary">
-                <p>
-                    <span>Subtotal</span>
-                    <span id="checkoutSubtotal">$0.00</span>
-                </p>
-                <p>
-                    <span>Shipping</span>
-                    <span>Free</span>
-                </p>
-                <p>
-                    <span>Tax</span>
-                    <span>$0.00</span>
-                </p>
-                <hr>
-                <h3>
-                    <span>Total</span>
-                    <span id="checkoutTotal">$0.00</span>
-                </h3>
-                <button id="placeOrderBtn">Place Order</button>
-            </div>
+
+
+        <h2>
+            Total:
+            <span id="checkoutTotal">
+                0
+            </span>
+        </h2>
+
+        <!-- ===============================
+Payment Method
+=============================== -->
+
+        <div class="payment-section">
+
+            <h3>
+                Payment Method
+            </h3>
+
+            <label class="payment-option">
+
+                <input type="radio" name="paymentMethod" value="cod" checked>
+
+                Cash on Delivery
+
+            </label>
+
+            <label class="payment-option">
+
+                <input type="radio" name="paymentMethod" value="jazzcash">
+
+                JazzCash
+
+            </label>
+
         </div>
-    </div>
-</section>
 
-<!-- ================= Footer ================= -->
 
-<footer class="footer">
-    <div class="footer-container">
-        <!-- Logo & About -->
-        <div class="footer-box">
-            <h2>Urban Threads</h2>
+        <!-- ===============================
+JazzCash Section
+=============================== -->
+
+        <div id="jazzcashSection" class="jazzcash-section" style="display:none;">
+
+            <h3>
+
+                JazzCash Payment
+
+            </h3>
+
+            <img id="jazzcashQR" src="images/jazzcash-placeholder.png" alt="JazzCash QR Code" class="qr-image">
+
             <p>
-                Discover premium fashion designed for comfort, confidence, and everyday style.
+
+                <strong>
+
+                    Account Title:
+
+                </strong>
+
+                Urban Threads
+
             </p>
-        </div>
-        <!-- Quick Links -->
-        <div class="footer-box">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="Shop.html">Shop</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-            </ul>
+
+            <p>
+
+                <strong>
+
+                    JazzCash Number:
+
+                </strong>
+
+                03XXXXXXXXX
+
+            </p>
+
+            <p>
+
+                After completing payment,
+
+                upload your payment receipt.
+
+            </p>
+
+            <input type="file" id="paymentReceipt" accept="image/*">
+
         </div>
 
-        <!-- Customer Care -->
-        <div class="footer-box">
-            <h3>Customer Care</h3>
-            <ul>
-                <li><a href="#">Shipping</a></li>
-                <li><a href="#">Returns</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">FAQs</a></li>
-            </ul>
-        </div>
-        <!-- Contact -->
-            <div class="footer-box">
-                <h3>Contact</h3>
-                <p><i class="fa-solid fa-envelope"></i> info@urbanthreads.com</p>
-                <p><i class="fa-solid fa-phone"></i> +92 300 1234567</p>
-                <p><i class="fa-solid fa-location-dot"></i> Karachi, Pakistan</p>
-                <div class="social-icons">
-                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-            </div>
-    </div>
-    <div class="footer-bottom">
-        <p>© 2026 Urban Threads. All Rights Reserved.</p>
-    </div>
-</footer>
 
-<div id="toast" class="toast"></div>
-<script type="module" src="Common.js"></script>
-<script type="module" src="Checkout.js"></script>
+
+        <button id="placeOrderBtn">
+            Place Order
+        </button>
+
+
+    </div>
+
+
+
+
+
+    <script type="module" src="Checkout.js"></script>
+
+
 </body>
+
 </html>

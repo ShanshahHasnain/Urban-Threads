@@ -1,452 +1,350 @@
-/* ===========================
-   Google Reset
-=========================== */
+/* ===============================
+   Urban Threads Checkout CSS
+================================ */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: 'Poppins', sans-serif;
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+    font-family:'Poppins',sans-serif;
+
 }
 
-body {
-    background: white;
-}
 
-/* ===========================
-   Header
-=========================== */
 
-.header-position {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 60px;
-    background: linear-gradient(90deg, #130101, #3b1814);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+body{
 
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background:#f5f5f5;
 
-    transition: .4s;
-}
-
-.header-position:hover {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, .25);
-}
-
-/* ===========================
-   Logo
-=========================== */
-
-.logo h1 {
-    color: white;
-    font-size: 34px;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.logo span {
-    color: #FFD166;
-    font-size: 42px;
-}
-
-.logo:hover h1 {
-    transform: scale(1.05);
-}
-
-/* ===========================
-   Navigation
-=========================== */
-
-.navbar ul {
-    display: flex;
-    gap: 35px;
-}
-
-.navbar a {
-    color: white;
-    font-size: 17px;
-    font-weight: 500;
-    position: relative;
-    transition: .3s;
-}
-
-/* Underline Animation */
-
-.navbar a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0%;
-    height: 2px;
-    background: #FFD166;
-    transition: .35s ease;
-}
-
-.navbar a:hover {
-    color: #FFD166;
-}
-
-.navbar a:hover::after {
-    width: 100%;
-}
-
-/* ===========================
-   Buttons
-=========================== */
-
-.button {
-    display: flex;
-    gap: 15px;
-}
-
-.button button {
-    padding: 10px 22px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 600;
-    transition: .35s;
-}
-
-/* Cart Button */
-
-.cart-btn {
-    background: white;
-    color: #111;
-}
-
-.cart-btn:hover {
-    background: #FFD166;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
-}
-
-/* Login Button */
-
-.login-btn {
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-}
-
-.login-btn:hover {
-    background: white;
-    color: #111;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
-}
-
-/* ===========================
-   User Dropdown
-=========================== */
-
-.user-menu{
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-menu{
-    position: absolute;
-    top: 110%;
-    right: 0;
-    width: 200px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,.15);
-    overflow: hidden;
-
-    display: none;
-    z-index: 999;
-}
-
-.dropdown-menu a,
-.dropdown-menu button{
-    width: 100%;
-    padding: 14px 18px;
-    display: block;
-    text-align: left;
-    background: transparent;
-    border: none;
-    color: #333;
-    font-size: 15px;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.dropdown-menu a:hover,
-.dropdown-menu button:hover{
-    background: #f5f5f5;
-    color: #8B5E3C;
-}
-
-.user-menu:hover .dropdown-menu{
-    display: block;
-}
-
-/* ===========================
-   Checkout Banner
-=========================== */
-
-.checkout-banner{
-    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-    url("images/checkout-banner.jpg");
-    background-size: cover;
-    background-position: center;
-    padding: 120px 80px;
-    text-align: center;
-    color: white;
-}
-
-.checkout-banner h4{
-    color:#FFD166;
-    letter-spacing:3px;
-    margin-bottom:15px;
-}
-
-.checkout-banner h1{
-    font-size:55px;
-    margin-bottom:15px;
-}
-
-.checkout-banner p{
-    font-size:18px;
-    color:#eee;
-}
-
-.breadcrumb{
-    margin-top:25px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:12px;
-}
-
-.breadcrumb a{
-    color:#FFD166;
-}
-
-.breadcrumb span{
-    color:white;
-}
-
-/* ===========================
-   Checkout Layout
-=========================== */
-
-.checkout{
-    padding:100px 80px;
-    background:#f8f4ee;
-}
-
-.checkout-container{
-    display:grid;
-    grid-template-columns:2fr 1fr;
-    gap:40px;
-}
-
-/* ===========================
-   Billing Details
-=========================== */
-
-.billing-details{
-    background:white;
     padding:40px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
 }
 
-.billing-details h2{
-    margin-bottom:30px;
-}
 
-.form-row{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-}
 
-.billing-details input{
-    width:100%;
-    padding:15px;
-    margin-bottom:20px;
-    border:1px solid #ddd;
-    border-radius:8px;
-    font-size:15px;
-}
+/* ===============================
+   Heading
+================================ */
 
-.billing-details h3{
-    margin:25px 0 15px;
-}
 
-.billing-details label{
-    display:block;
-    margin-bottom:15px;
-    cursor:pointer;
-}
+h1{
 
-/* ===========================
-   Order Summary
-=========================== */
-
-.order-summary{
-    background:white;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    height:fit-content;
-    position:sticky;
-    top:100px;
-}
-
-.order-summary h2{
-    margin-bottom:25px;
-}
-
-.summary p,
-.summary h3{
-    display:flex;
-    justify-content:space-between;
-    margin:18px 0;
-}
-
-.summary button{
-    width:100%;
-    padding:15px;
-    border:none;
-    background:#111;
-    color:white;
-    border-radius:8px;
-    font-size:16px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.summary button:hover{
-    background:#8B5E3C;
-}
-
-/* ===========================
-   Footer
-=========================== */
-
-.footer{
-    background:#130101;
-    color:#fff;
-    padding:70px 80px 20px;
-}
-
-.footer-container{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:40px;
-    margin-bottom:40px;
-}
-
-.footer-box h2{
-    color:#FFD166;
-    margin-bottom:20px;
-    font-size:30px;
-}
-
-.footer-box h3{
-    color:#FFD166;
-    margin-bottom:20px;
-    font-size:22px;
-}
-
-.footer-box p{
-    color:#ddd;
-    line-height:1.8;
-    margin-bottom:12px;
-}
-
-.footer-box ul li{
-    margin-bottom:12px;
-}
-
-.footer-box ul li a{
-    color:#ddd;
-    transition:.3s;
-}
-
-.footer-box ul li a:hover{
-    color:#FFD166;
-    padding-left:8px;
-}
-
-.footer-box i{
-    margin-right:10px;
-    color:#FFD166;
-}
-
-/* Social Icons */
-
-.social-icons{
-    display:flex;
-    gap:15px;
-    margin-top:20px;
-}
-
-.social-icons a{
-    width:42px;
-    height:42px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#2b1616;
-    color:white;
-    border-radius:50%;
-    transition:.3s;
-}
-
-.social-icons a:hover{
-    background:#FFD166;
-    color:#111;
-    transform:translateY(-5px);
-}
-
-/* Bottom */
-.footer-bottom{
-    border-top:1px solid rgba(255,255,255,.15);
     text-align:center;
-    padding-top:20px;
+
+    margin-bottom:30px;
+
+    font-size:35px;
+
+    color:#111;
+
 }
 
-.footer-bottom p{
-    color:#bbb;
+
+
+/* ===============================
+   Checkout Box
+================================ */
+
+
+.checkout-box{
+
+    background:white;
+
+    max-width:700px;
+
+    margin:auto;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.1);
+
 }
 
-/* ===========================
-   Responsive
-=========================== */
 
-@media(max-width:900px){
 
-    .checkout{
-        padding:70px 20px;
-    }
+/* ===============================
+   Inputs
+================================ */
 
-    .checkout-container{
-        grid-template-columns:1fr;
-    }
 
-    .form-row{
-        grid-template-columns:1fr;
-    }
+.checkout-box input,
+.checkout-box textarea{
 
-    .checkout-banner{
-        padding:90px 20px;
-    }
 
-    .checkout-banner h1{
-        font-size:40px;
-    }
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:18px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    outline:none;
+
+}
+
+
+
+.checkout-box input:focus,
+.checkout-box textarea:focus{
+
+    border-color:#111;
+
+}
+
+
+
+textarea{
+
+    height:120px;
+
+    resize:none;
+
+}
+
+
+
+/* ===============================
+   Order Summary
+================================ */
+
+
+#orderSummary{
+
+
+    background:#fafafa;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    margin:20px 0;
+
+}
+
+
+
+.order-item{
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:10px 0;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+
+
+.order-item:last-child{
+
+    border:none;
+
+}
+
+
+
+/* ===============================
+   Total
+================================ */
+
+
+.checkout-box h2{
+
+
+    margin:20px 0;
+
+    font-size:22px;
+
+}
+
+
+
+/* ===============================
+   Place Order Button
+================================ */
+
+
+#placeOrderBtn{
+
+
+    width:100%;
+
+    padding:15px;
+
+
+    background:#111;
+
+    color:white;
+
+
+    border:none;
+
+    border-radius:8px;
+
+
+    font-size:17px;
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+
+    transition:0.3s;
+
+
+}
+
+
+
+#placeOrderBtn:hover{
+
+
+    background:#333;
+
+    transform:translateY(-2px);
+
+
+}
+
+/* ===============================
+Payment Section
+=============================== */
+
+.payment-section{
+
+    margin-top:30px;
+
+    padding:20px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    background:#fafafa;
+
+}
+
+.payment-section h3{
+
+    margin-bottom:15px;
+
+}
+
+.payment-option{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+
+/* ===============================
+JazzCash Section
+=============================== */
+
+.jazzcash-section{
+
+    margin-top:20px;
+
+    padding:20px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    background:#fff;
+
+    text-align:center;
+
+}
+
+.qr-image{
+
+    width:220px;
+
+    height:220px;
+
+    object-fit:contain;
+
+    margin:20px auto;
+
+    display:block;
+
+}
+
+.jazzcash-section p{
+
+    margin:10px 0;
+
+    line-height:1.6;
+
+}
+
+#paymentReceipt{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:10px;
+
+}
+
+
+
+/* ===============================
+   Mobile Responsive
+================================ */
+
+
+@media(max-width:600px){
+
+
+body{
+
+    padding:20px;
+
+}
+
+
+
+.checkout-box{
+
+    padding:20px;
+
+}
+
+
+
+h1{
+
+    font-size:28px;
+
+}
+
 
 }

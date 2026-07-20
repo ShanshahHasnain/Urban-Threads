@@ -20,19 +20,19 @@ function displayCart() {
                 <p>Start shopping to add products.</p>
             </div>
         `;
-        subtotal.textContent = "$0.00";
-        grandTotal.textContent = "$0.00";
+        subtotal.textContent = "PKR 0";
+        grandTotal.textContent = "PKR 0";
         return;
     }
 
     cart.forEach(product => {
-    total += product.price * product.quantity;
-    cartItems.innerHTML += `
+        total += product.price * product.quantity;
+        cartItems.innerHTML += `
     <div class="cart-item">
         <img src="${product.image}" alt="${product.name}">
         <div class="cart-info">
             <h3>${product.name}</h3>
-            <p class="product-price">$${product.price.toFixed(2)}</p>
+            <p class="product-price">PKR ${Number(product.price).toLocaleString()}</p>
             <div class="quantity-box">
                 <button class="minus-btn" data-id="${product.id}">-</button>
                 <span>${product.quantity}</span>
@@ -44,9 +44,9 @@ function displayCart() {
         </div>
     </div>
     `;
-});
-    subtotal.textContent = "$" + total.toFixed(2);
-    grandTotal.textContent = "$" + total.toFixed(2);
+    });
+    subtotal.textContent ="PKR " + Number(total).toLocaleString();
+    grandTotal.textContent ="PKR " + Number(total).toLocaleString();
 }
 
 // ===============================
@@ -76,3 +76,50 @@ cartItems.addEventListener("click", (e) => {
     localStorage.setItem("cart", JSON.stringify(cart));
     displayCart();
 });
+
+// ===============================
+// Checkout Button
+// ===============================
+
+const checkoutBtn =
+    document.getElementById("checkoutBtn");
+
+
+if (checkoutBtn) {
+
+
+    checkoutBtn.addEventListener(
+        "click",
+        () => {
+
+
+            const cart =
+                JSON.parse(
+                    localStorage.getItem("cart")
+                ) || [];
+
+
+
+            if (cart.length === 0) {
+
+
+                showToast(
+                    "Cart is empty"
+                );
+
+
+                return;
+
+
+            }
+
+
+
+            window.location.href =
+                "Checkout.html";
+
+
+        });
+
+
+}

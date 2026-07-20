@@ -52,6 +52,8 @@
 
                     <a href="MyOrders.html">My Orders</a>
 
+                    <li><a href="MyWishlist.html">My Wishlist</a></li>
+
                     <a href="AdminDashboard.html">
                         🛠 Admin Panel
                     </a>
@@ -126,60 +128,10 @@
             <p>Discover our most loved fashion pieces.</p>
         </div>
 
-        <div class="product-container">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <span class="badge">NEW</span>
-                <img src="images/product1.jpg" alt="Oversized T-Shirt">
-                <div class="product-info">
-                    <h2>Oversized T-Shirt</h2>
-                    <div class="rating">
-                        ⭐⭐⭐⭐⭐
-                    </div>
-                    <p class="price">$29.99</p>
-                    <button class="add-cart-btn">Add to Cart</button>
-                </div>
-            </div>
-            <!-- Product 2 -->
-            <div class="product-card">
-                <span class="badge sale">SALE</span>
-                <img src="images/product2.jpg" alt="Casual Shirt">
-                <div class="product-info">
-                    <h2>Casual Shirt</h2>
-                    <div class="rating">
-                        ⭐⭐⭐⭐☆
-                    </div>
-                    <p class="price">$39.99</p>
-                    <button class="add-cart-btn">Add to Cart</button>
-                </div>
-            </div>
-            <!-- Product 3 -->
-            <div class="product-card">
-                <span class="badge">NEW</span>
-                <img src="images/product3.jpg" alt="Premium Hoodie">
-                <div class="product-info">
-                    <h2>Premium Hoodie</h2>
-                    <div class="rating">
-                        ⭐⭐⭐⭐⭐
-                    </div>
-                    <p class="price">$49.99</p>
-                    <button class="add-cart-btn">Add to Cart</button>
-                </div>
-            </div>
-            <!-- Product 4 -->
-            <div class="product-card">
-                <span class="badge sale">SALE</span>
-                <img src="images/product4.jpg" alt="Denim Jeans">
-                <div class="product-info">
-                    <h2>Denim Jeans</h2>
-                    <div class="rating">
-                        ⭐⭐⭐⭐☆
-                    </div>
-                    <p class="price">$44.99</p>
-                    <button class="add-cart-btn">Add to Cart</button>
-                </div>
-            </div>
+        <div class="product-container" id="featuredProducts">
+
         </div>
+
     </section>
 
     <!-- ================= Why Choose Us ================= -->
@@ -237,58 +189,21 @@
     <!-- ================= Customer Reviews ================= -->
 
     <section class="reviews reveal">
+
         <div class="reviews-title">
+
             <h4>TESTIMONIALS</h4>
+
             <h1>What Our Customers Say</h1>
+
             <p>See why customers love shopping with Urban Threads.</p>
+
         </div>
-        <div class="reviews-container">
-            <!-- Review 1 -->
-            <div class="review-card">
-                <img src="images/customer1.jpg" alt="Customer">
-                <h2>Michael Carter</h2>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-                <p>
-                    The quality exceeded my expectations. The fabric feels premium and the fit is absolutely perfect.
-                </p>
-            </div>
-            <!-- Review 2 -->
-            <div class="review-card">
-                <img src="images/customer2.jpg" alt="Customer">
-                <h2>Emma Wilson</h2>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                </div>
-                <p>
-                    Fast delivery and amazing customer support. I'll definitely shop here again.
-                </p>
-            </div>
-            <!-- Review 3 -->
-            <div class="review-card">
-                <img src="images/customer3.jpg" alt="Customer">
-                <h2>Daniel Smith</h2>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-                <p>
-                    Modern designs, premium quality, and excellent prices. Highly recommended.
-                </p>
-            </div>
+
+        <div class="reviews-container" id="homeReviews">
+
         </div>
+
     </section>
 
     <!-- ================= Footer ================= -->
@@ -343,5 +258,7 @@
     </footer>
 
     <script type="module" src="Common.js"></script>
-    <script src="Home.js"></script>
+    <script type="module" src="HomeFirebase.js"></script>
+    <script type="module" src="HomeReviews.js"></script>
+    <script type="module" src="Home.js"></script>
 </body>

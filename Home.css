@@ -723,15 +723,6 @@ body {
     box-shadow:0 20px 40px rgba(0,0,0,.15);
 }
 
-.review-card img{
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:20px;
-    border:4px solid #8B5E3C;
-}
-
 .review-card h2{
     margin-bottom:12px;
     color:#111;

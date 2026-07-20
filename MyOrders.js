@@ -47,13 +47,73 @@ onAuthStateChanged(auth, async (user) => {
             <h3>Order #${orderId.slice(-6)}</h3>
 
             <p>
-    <strong>Status:</strong>
-    <span class="status ${order.status.toLowerCase()}">
-        ${order.status}
-    </span>
+    
+            <strong>Status:</strong>
+    
+            <span class="status ${order.status.toLowerCase()}">
+        
+            ${order.status}
+    
+            </span>
+
+            </p>
+
+            <p>
+
+            <strong>Payment Method:</strong>
+
+            ${order.paymentMethod || "Cash on Delivery"}
+
+            </p>
+
+
+            <p>
+
+            <strong>Payment Status:</strong>
+
+            ${order.paymentStatus || "Pending"}
+
+            </p>
+
+
+            ${order.paymentMethod === "jazzcash"
+                ?
+
+                `
+<div class="receipt-box">
+
+<p>
+
+<strong>Payment Receipt</strong>
+
 </p>
 
-            <p><strong>Total:</strong> $${order.total}</p>
+<a
+href="${order.paymentReceipt}"
+target="_blank">
+
+<img
+src="${order.paymentReceipt}"
+class="receipt-image">
+
+</a>
+
+<p class="receipt-note">
+
+Your payment is under verification.
+
+</p>
+
+</div>
+`
+
+                :
+
+                ``
+
+            }
+
+            <p><strong>Total:</strong>PKR ${Number(order.totalAmount).toLocaleString()}</p>
 
             <p><strong>Date:</strong> ${new Date(order.orderDate).toLocaleDateString()}</p>
 
@@ -85,7 +145,7 @@ onAuthStateChanged(auth, async (user) => {
         
                 <p>Quantity: ${product.quantity}</p>
         
-                <p>$${(product.price * product.quantity).toFixed(2)}</p>
+                <p>PKR ${Number(product.price * product.quantity).toLocaleString()}</p>
     
             </div>
 `).join("")}

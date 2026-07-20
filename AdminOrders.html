@@ -1,23 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Urban Threads Admin - Orders
+    </title>
 
-<title>Urban Threads - Admin Orders</title>
-
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-rel="stylesheet">
-
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-
-<link rel="stylesheet" href="AdminOrders.css">
+    <link rel="stylesheet" href="AdminOrders.css">
 
 </head>
 
@@ -25,124 +15,68 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 <body>
 
 
-<!-- Header -->
+    <h1>
+        Orders Management
+    </h1>
 
-<header class="admin-header">
 
 
-<div class="admin-logo">
+    <table>
 
-<h1>
-Urban Threads
-<span>Admin</span>
-</h1>
 
-</div>
+        <thead>
 
+            <tr>
 
-<a href="AdminDashboard.html">
+                <th>
+                    Order ID
+                </th>
 
-<button>
-<i class="fa-solid fa-arrow-left"></i>
-Dashboard
-</button>
 
-</a>
+                <th>
+                    Customer
+                </th>
 
 
-</header>
+                <th>
+                    Products
+                </th>
 
 
+                <th>
+                    Total
+                </th>
 
 
-<div class="orders-container">
+                <th>
+                    Status
+                </th>
 
 
+                <th>
+                    Action
+                </th>
 
-<h2>
-Customer Orders
-</h2>
 
+            </tr>
 
-<p class="subtitle">
-Manage all customer orders from here.
-</p>
 
+        </thead>
 
 
 
-<div class="orders-table-box">
+        <tbody id="ordersTable">
 
+        </tbody>
 
-<table>
 
 
-<thead>
+    </table>
 
-<tr>
 
-<th>
-Order ID
-</th>
 
 
-<th>
-Customer
-</th>
-
-
-<th>
-Products
-</th>
-
-
-<th>
-Total
-</th>
-
-
-<th>
-Status
-</th>
-
-
-<th>
-Action
-</th>
-
-
-</tr>
-
-
-</thead>
-
-
-
-<tbody id="ordersTable">
-
-
-<!-- Firebase Orders -->
-
-
-</tbody>
-
-
-
-</table>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-<script type="module" src="AdminOrders.js"></script>
+    <script type="module" src="AdminOrders.js"></script>
 
 
 </body>

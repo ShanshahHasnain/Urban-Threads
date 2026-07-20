@@ -7,12 +7,13 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
 <title>
-Urban Threads Admin - Products
+Urban Threads Admin - Users
 </title>
 
 
-<link rel="stylesheet" href="AdminProducts.css">
+<link rel="stylesheet" href="AdminUsers.css">
 
 
 </head>
@@ -22,21 +23,12 @@ Urban Threads Admin - Products
 
 
 <h1>
-Manage Products
+Manage Users
 </h1>
 
 
 
-<div class="top-bar">
-
-<button onclick="addProductPage()">
-+ Add Product
-</button>
-
-
-</div>
-
-
+<div class="users-container">
 
 
 <table>
@@ -47,7 +39,7 @@ Manage Products
 <tr>
 
 <th>
-Image
+User ID
 </th>
 
 
@@ -57,17 +49,17 @@ Name
 
 
 <th>
-Category
+Email
 </th>
 
 
 <th>
-Price
+Phone
 </th>
 
 
 <th>
-Stock
+Country
 </th>
 
 
@@ -82,21 +74,21 @@ Action
 </thead>
 
 
-
-<tbody id="productsTable">
+<tbody id="usersTable">
 
 
 </tbody>
 
 
-
 </table>
 
 
+</div>
 
 
 
-<script type="module" src="AdminProducts.js"></script>
+
+<script type="module" src="AdminUsers.js"></script>
 
 
 </body>

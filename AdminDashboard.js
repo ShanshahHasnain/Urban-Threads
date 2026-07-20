@@ -32,16 +32,16 @@ const ADMIN_EMAIL = "admin@urbanthreads.com";
 // ===============================
 
 
-onAuthStateChanged(auth, async(user)=>{
+onAuthStateChanged(auth, async (user) => {
 
 
-    if(!user || user.email !== ADMIN_EMAIL){
+    if (!user || user.email !== ADMIN_EMAIL) {
 
 
         alert("Access Denied ❌");
 
 
-        window.location.href="Home.html";
+        window.location.href = "Home.html";
 
 
         return;
@@ -64,33 +64,33 @@ onAuthStateChanged(auth, async(user)=>{
 // ===============================
 
 
-async function loadDashboard(){
+async function loadDashboard() {
 
 
-    try{
+    try {
 
 
         // Users
 
         const usersSnapshot = await get(
-            ref(database,"users")
+            ref(database, "users")
         );
 
 
         let totalUsers = 0;
 
 
-        if(usersSnapshot.exists()){
+        if (usersSnapshot.exists()) {
 
             totalUsers =
-            Object.keys(usersSnapshot.val()).length;
+                Object.keys(usersSnapshot.val()).length;
 
         }
 
 
 
         document.getElementById("totalUsers")
-        .textContent = totalUsers;
+            .textContent = totalUsers;
 
 
 
@@ -101,7 +101,7 @@ async function loadDashboard(){
 
 
         const ordersSnapshot = await get(
-            ref(database,"orders")
+            ref(database, "orders")
         );
 
 
@@ -113,22 +113,67 @@ async function loadDashboard(){
 
 
 
-        if(ordersSnapshot.exists()){
+        if (ordersSnapshot.exists()) {
 
 
             const orders =
-            ordersSnapshot.val();
+                ordersSnapshot.val();
+
+            const recentOrders =
+                document.getElementById("recentOrders");
+
+
+            recentOrders.innerHTML = "";
 
 
 
-            Object.values(orders).forEach(order=>{
+            Object.entries(orders)
+                .slice(-5)
+                .reverse()
+                .forEach(([id, order]) => {
+
+
+                    recentOrders.innerHTML += `
+
+<tr>
+
+<td>
+${id}
+</td>
+
+
+<td>
+${order.customerName || "Unknown"}
+</td>
+
+
+<td>
+${order.status}
+</td>
+
+
+<td>
+PKR ${Number(order.totalAmount || order.total || 0).toLocaleString()}
+</td>
+
+
+</tr>
+
+`;
+
+
+                });
+
+
+
+            Object.values(orders).forEach(order => {
 
 
                 totalOrders++;
 
 
 
-                if(order.status === "Pending"){
+                if (order.status === "Pending") {
 
                     pendingOrders++;
 
@@ -136,7 +181,9 @@ async function loadDashboard(){
 
 
 
-                revenue += Number(order.total || 0);
+                revenue += Number(
+                    order.total || order.totalAmount || 0
+                );
 
 
 
@@ -150,25 +197,24 @@ async function loadDashboard(){
 
 
         document.getElementById("totalOrders")
-        .textContent = totalOrders;
+            .textContent = totalOrders;
 
 
 
         document.getElementById("pendingOrders")
-        .textContent = pendingOrders;
+            .textContent = pendingOrders;
 
 
 
         document.getElementById("totalRevenue")
-        .textContent =
-        "$" + revenue.toFixed(2);
-
+            .textContent =
+            "PKR " + Number(revenue).toLocaleString();
 
 
     }
 
 
-    catch(error){
+    catch (error) {
 
 
         console.error(error);
@@ -189,23 +235,23 @@ async function loadDashboard(){
 
 
 const logoutBtn =
-document.getElementById("logoutAdminBtn");
+    document.getElementById("logoutAdminBtn");
 
 
 
-if(logoutBtn){
+if (logoutBtn) {
 
 
-logoutBtn.addEventListener("click",async()=>{
+    logoutBtn.addEventListener("click", async () => {
 
 
-    await signOut(auth);
+        await signOut(auth);
 
 
-    window.location.href="Login.html";
+        window.location.href = "Login.html";
 
 
-});
+    });
 
 
 }

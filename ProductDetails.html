@@ -70,55 +70,56 @@
             </div>
         </div>
     </section>
-    <section class="product-details">
-        <div class="product-container">
-            <div class="product-image">
-                <img id="productImage" src="" alt="">
-                <div class="product-gallery">
-                    <img class="thumb active-thumb" src="images/product2.jpg">
-                    <img class="thumb" src="images/product4.jpg">
-                    <img class="thumb" src="images/product3.jpg">
-                </div>
-            </div>
-            <div class="product-info">
-                <h1 id="productName">Product Name</h1>
-                <p class="product-price" id="productPrice">$0.00</p>
+    <div class="product-detail">
 
-                <!-- Size Selection -->
-                <div class="size-box">
-                    <h3>Size:</h3>
-                    <button>S</button>
-                    <button>M</button>
-                    <button>L</button>
-                    <button>XL</button>
-                </div>
+    <img id="productImage" src="" alt="Product">
 
-                <!-- Color Selection -->
-                <div class="color-box">
-                    <h3>Color:</h3>
-                    <button class="color black"></button>
-                    <button class="color white"></button>
-                    <button class="color blue"></button>
-                </div>
-                <p class="product-description" id="productDescription">
-                    Product description will appear here.
-                </p>
-                <div class="quantity-box">
-                    <button id="minusBtn">-</button>
-                    <span id="quantity">1</span>
-                    <button id="plusBtn">+</button>
-                </div>
-                <div class="action-buttons">
-                    <button class="add-cart-btn" id="addCartBtn">
-                        Add to Cart
-                    </button>
-                    <button class="wishlist-btn" id="wishlistBtn">
-                        ❤️ Wishlist
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="details">
+
+        <h1 id="productName">
+            Loading...
+        </h1>
+
+
+        <h2 id="productPrice">
+            
+        </h2>
+
+
+        <p id="productDescription">
+
+        </p>
+
+
+        <p>
+            Stock:
+            <span id="productStock"></span>
+        </p>
+
+
+        <select id="productSize">
+
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+
+        </select>
+
+
+        <button id="addCartBtn">
+            Add To Cart
+        </button>
+
+
+        <button id="wishlistBtn">
+            ❤️ Wishlist
+        </button>
+
+
+    </div>
+
+</div>
 
     <!-- ================= Reviews ================= -->
 

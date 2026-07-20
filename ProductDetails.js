@@ -1,138 +1,122 @@
 // ===============================
-// Urban Threads - ProductDetails.js
+// Urban Threads ProductDetails.js
 // ===============================
 
 import { auth, database } from "./Firebase.js";
 
 import {
     ref,
-    set,
-    remove,
     get,
-    push,
-    onValue
+    set,
+    push
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-database.js";
 
-import {
-    onAuthStateChanged
-} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js";
 
+// ===============================
+// Product ID
+// ===============================
 
-let selectedSize = "M";
-let selectedColor = "Black";
-const addCartBtn = document.getElementById("addCartBtn");
+const urlParams =
+    new URLSearchParams(window.location.search);
 
-const products = [
-    {
-        id: "1",
-        name: "Oversized T-Shirt",
-        price: 29.99,
-        image: "images/product1.jpg",
-        description: "Premium oversized t-shirt designed for comfort and modern street style."
-    },
-
-    {
-        id: "2",
-        name: "Casual Shirt",
-        price: 34.99,
-        image: "images/product2.jpg",
-        description: "Classic casual shirt perfect for everyday wear."
-    },
-
-    {
-        id: "3",
-        name: "Premium Hoodie",
-        price: 49.99,
-        image: "images/product3.jpg",
-        description: "Warm and stylish premium hoodie with comfortable fabric."
-    },
-
-    {
-        id: "4",
-        name: "Denim Jeans",
-        price: 44.99,
-        image: "images/product4.jpg",
-        description: "High quality denim jeans with a modern fit."
-    }
-];
+const productId =
+    urlParams.get("id");
 
 
 // ===============================
-// Get Product ID From URL
+// Product Elements
 // ===============================
 
-const urlParams = new URLSearchParams(window.location.search);
+const productImage =
+    document.getElementById("productImage");
 
-const productId = urlParams.get("id");
+const productName =
+    document.getElementById("productName");
+
+const productPrice =
+    document.getElementById("productPrice");
+
+const productDescription =
+    document.getElementById("productDescription");
+
+const productStock =
+    document.getElementById("productStock");
+
+
+// Buttons
+
+const addCartBtn =
+    document.getElementById("addCartBtn");
+
+const wishlistBtn =
+    document.getElementById("wishlistBtn");
+
+
+// ===============================
+// Reviews Elements
+// ===============================
+
+const reviewText =
+    document.getElementById("reviewText");
+
+const submitReviewBtn =
+    document.getElementById("submitReviewBtn");
+
+const stars =
+    document.querySelectorAll(".star");
+
+const reviewsContainer =
+    document.getElementById("reviewsContainer");
+
+const averageRating =
+    document.getElementById("averageRating");
+
+const totalReviews =
+    document.getElementById("totalReviews");
+
+
+// ===============================
+// Current Product
+// ===============================
+
+let currentProduct = null;
+
+let selectedRating = 0;
 
 
 // ===============================
 // Load Product
 // ===============================
 
-const product = products.find(item => item.id === productId);
+async function loadProduct() {
 
 
-if (product) {
-
-    document.getElementById("productImage").src = product.image;
-
-    document.getElementById("productImage").alt = product.name;
-
-    document.getElementById("productName").textContent = product.name;
-
-    document.getElementById("productPrice").textContent =
-        "$" + product.price;
-
-    document.getElementById("productDescription").textContent =
-        product.description;
-
-}
+    const snapshot =
+        await get(
+            ref(
+                database,
+                `products/${productId}`
+            )
+        );
 
 
-// ===============================
-// Quantity
-// ===============================
+    if (!snapshot.exists()) {
 
-let quantity = 1;
+        productName.textContent =
+            "Product Not Found";
 
-const quantityText = document.getElementById("quantity");
-
-
-document.getElementById("plusBtn").addEventListener("click", () => {
-
-    quantity++;
-
-    quantityText.textContent = quantity;
-
-});
-
-
-document.getElementById("minusBtn").addEventListener("click", () => {
-
-    if (quantity > 1) {
-
-        quantity--;
-
-        quantityText.textContent = quantity;
+        return;
 
     }
 
-});
 
-// ===============================
-// Add To Cart
-// ===============================
-
-addCartBtn.addEventListener("click", () => {
+    const product =
+        snapshot.val();
 
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    currentProduct = {
 
-
-    const cartProduct = {
-
-        id: product.id,
+        id: productId,
 
         name: product.name,
 
@@ -140,279 +124,298 @@ addCartBtn.addEventListener("click", () => {
 
         image: product.image,
 
-        size: selectedSize,
+        category: product.category,
 
-        color: selectedColor,
+        description: product.description,
 
-        quantity: quantity
+        stock: product.stock
 
     };
 
 
-    const existingProduct = cart.find(
-        item => item.id === cartProduct.id
-    );
+    productImage.src =
+        product.image;
 
 
-    if (existingProduct) {
-
-        existingProduct.quantity += quantity;
-
-    }
-
-    else {
-
-        cart.push(cartProduct);
-
-    }
+    productName.textContent =
+        product.name;
 
 
-    localStorage.setItem(
-        "cart",
-        JSON.stringify(cart)
-    );
+    productPrice.textContent =
+        "PKR " + Number(product.price).toLocaleString();
 
 
-    updateCartCount();
+    productDescription.textContent =
+        product.description;
 
 
-    showToast(
-        product.name + " added to cart 🛒"
-    );
+    productStock.textContent =
+        product.stock;
 
 
-});
+}
+
+
+loadProduct();
 
 // ===============================
-// Wishlist Button
+// Add To Cart
 // ===============================
 
-const wishlistBtn = document.getElementById("wishlistBtn");
 
+if (addCartBtn) {
 
-let isWishlisted = false;
 
+    addCartBtn.addEventListener(
+        "click",
+        () => {
 
 
-onAuthStateChanged(auth, async (user) => {
+            if (!currentProduct) {
 
+                showToast("Product loading...");
 
-    if (!user) return;
-
-
-    const snapshot = await get(
-        ref(database, `wishlist/${user.uid}/${product.id}`)
-    );
-
-
-    if (snapshot.exists()) {
-
-        isWishlisted = true;
-
-        wishlistBtn.innerHTML = "❤️ Wishlisted";
-
-    }
-
-
-});
-
-
-
-
-wishlistBtn.addEventListener("click", async () => {
-
-
-    const user = auth.currentUser;
-
-
-    if (!user) {
-
-        showToast("Please login first ❤️");
-
-        setTimeout(() => {
-
-            window.location.href = "Login.html";
-
-        }, 1500);
-
-
-        return;
-
-    }
-
-
-
-    const wishlistRef = ref(
-        database,
-        `wishlist/${user.uid}/${product.id}`
-    );
-
-
-
-    if (isWishlisted) {
-
-
-        await remove(wishlistRef);
-
-
-        isWishlisted = false;
-
-
-        wishlistBtn.innerHTML = "❤️ Wishlist";
-
-
-        showToast("Removed from wishlist");
-
-
-    }
-
-    else {
-
-
-        await set(wishlistRef, {
-
-            id: product.id,
-
-            name: product.name,
-
-            price: product.price,
-
-            image: product.image
-
-        });
-
-
-        isWishlisted = true;
-
-
-        wishlistBtn.innerHTML = "❤️ Wishlisted";
-
-
-        showToast("Added to wishlist ❤️");
-
-
-    }
-
-
-});
-
-// ===============================
-// Size Selection
-// ===============================
-
-const sizeButtons = document.querySelectorAll(".size-box button");
-
-
-sizeButtons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        sizeButtons.forEach(btn => {
-            btn.classList.remove("active");
-        });
-
-
-        button.classList.add("active");
-
-
-        selectedSize = button.textContent;
-
-    });
-
-});
-
-// ===============================
-// Color Selection
-// ===============================
-
-const colorButtons = document.querySelectorAll(".color");
-
-
-colorButtons.forEach(color => {
-
-
-    color.addEventListener("click", () => {
-
-
-        colorButtons.forEach(btn => {
-            btn.classList.remove("active");
-        });
-
-
-        color.classList.add("active");
-
-
-        if (color.classList.contains("black")) {
-            selectedColor = "Black";
-        }
-
-        else if (color.classList.contains("white")) {
-            selectedColor = "White";
-        }
-
-        else if (color.classList.contains("blue")) {
-            selectedColor = "Blue";
-        }
-
-
-    });
-
-
-});
-
-// ===============================
-// Product Gallery
-// ===============================
-
-const mainImage = document.getElementById("productImage");
-
-const thumbnails = document.querySelectorAll(".thumb");
-
-thumbnails.forEach(thumbnail => {
-
-    thumbnail.addEventListener("click", () => {
-
-        mainImage.src = thumbnail.src;
-
-        thumbnails.forEach(img => {
-            img.classList.remove("active-thumb");
-        });
-
-        thumbnail.classList.add("active-thumb");
-
-    });
-
-});
-
-// ===============================
-// Review Star Rating
-// ===============================
-
-let selectedRating = 0;
-
-const stars = document.querySelectorAll(".star");
-
-stars.forEach((star) => {
-
-    star.addEventListener("click", () => {
-
-        selectedRating = Number(star.dataset.rating);
-
-        stars.forEach((s) => {
-
-            if (Number(s.dataset.rating) <= selectedRating) {
-
-                s.classList.add("active");
-
-            } else {
-
-                s.classList.remove("active");
+                return;
 
             }
 
+
+
+            let cart =
+                JSON.parse(
+                    localStorage.getItem("cart")
+                ) || [];
+
+
+
+            const existingProduct =
+                cart.find(
+                    item =>
+                        item.id === currentProduct.id
+                );
+
+
+
+            if (existingProduct) {
+
+
+                existingProduct.quantity++;
+
+
+            }
+
+            else {
+
+
+                cart.push({
+
+                    id: currentProduct.id,
+
+                    name: currentProduct.name,
+
+                    price: currentProduct.price,
+
+                    image: currentProduct.image,
+
+                    category: currentProduct.category,
+
+                    quantity: 1
+
+                });
+
+
+            }
+
+
+
+            localStorage.setItem(
+                "cart",
+                JSON.stringify(cart)
+            );
+
+
+
+            if (window.updateCartCount) {
+
+                updateCartCount();
+
+            }
+
+
+
+            showToast(
+                currentProduct.name +
+                " added to cart 🛒"
+            );
+
+
+
         });
 
-    });
+
+}
+
+
+
+
+// ===============================
+// Wishlist
+// ===============================
+
+
+if (wishlistBtn) {
+
+
+    wishlistBtn.addEventListener(
+        "click",
+        async () => {
+
+
+            const user =
+                auth.currentUser;
+
+
+
+            if (!user) {
+
+
+                showToast(
+                    "Please login first ❤️"
+                );
+
+
+                setTimeout(() => {
+
+
+                    window.location.href =
+                        "Login.html";
+
+
+                }, 1500);
+
+
+                return;
+
+
+            }
+
+
+
+            if (!currentProduct) {
+
+                return;
+
+            }
+
+
+
+            try {
+
+
+                await set(
+
+                    ref(
+
+                        database,
+
+                        `wishlist/${user.uid}/${currentProduct.id}`
+
+                    ),
+
+
+                    currentProduct
+
+
+                );
+
+
+
+                wishlistBtn.innerHTML =
+                    "❤️ Added";
+
+
+
+                showToast(
+                    "Added to wishlist ❤️"
+                );
+
+
+            }
+
+
+
+            catch (error) {
+
+
+                console.log(error);
+
+
+                showToast(
+                    "Wishlist Failed"
+                );
+
+
+            }
+
+
+
+        });
+
+
+}
+
+
+
+
+// ===============================
+// Star Rating
+// ===============================
+
+
+stars.forEach(star => {
+
+
+    star.addEventListener(
+        "click",
+        () => {
+
+
+            selectedRating =
+                Number(
+                    star.dataset.rating
+                );
+
+
+
+            stars.forEach(s => {
+
+
+                if (
+                    Number(s.dataset.rating)
+                    <= selectedRating
+                ) {
+
+                    s.style.color =
+                        "gold";
+
+
+                }
+
+                else {
+
+
+                    s.style.color =
+                        "gray";
+
+
+                }
+
+
+            });
+
+
+        });
+
 
 });
 
@@ -420,86 +423,186 @@ stars.forEach((star) => {
 // Submit Review
 // ===============================
 
-const submitReviewBtn = document.getElementById("submitReviewBtn");
-const reviewText = document.getElementById("reviewText");
 
-submitReviewBtn.addEventListener("click", async () => {
+if (submitReviewBtn) {
 
-    const user = auth.currentUser;
 
-    if (!user) {
+    submitReviewBtn.addEventListener(
+        "click",
+        async () => {
 
-        showToast("Please login first");
-        return;
 
-    }
+            const user =
+                auth.currentUser;
 
-    if (selectedRating === 0) {
 
-        showToast("Please select rating ⭐");
-        return;
 
-    }
+            if (!user) {
 
-    if (reviewText.value.trim() === "") {
 
-        showToast("Write your review first");
-        return;
+                showToast(
+                    "Please login first ❤️"
+                );
 
-    }
 
-    const reviewRef = ref(
-        database,
-        `reviews/${product.id}/${user.uid}`
-    );
+                return;
 
-    await set(reviewRef, {
 
-        userId: user.uid,
+            }
 
-        userName: user.displayName || "Anonymous",
 
-        rating: selectedRating,
 
-        review: reviewText.value,
+            if (selectedRating === 0) {
 
-        date: new Date().toISOString()
 
-    });
+                showToast(
+                    "Please select rating ⭐"
+                );
 
-    reviewText.value = "";
 
-    selectedRating = 0;
+                return;
 
-    stars.forEach(star => {
 
-        star.classList.remove("active");
+            }
 
-    });
 
-    if (isUpdate) {
 
-        showToast("Review updated successfully ✏️");
+            if (reviewText.value.trim() === "") {
 
-    } else {
 
-        showToast("Review submitted successfully ⭐");
+                showToast(
+                    "Please write review"
+                );
 
-    }
 
-});
+                return;
+
+
+            }
+
+
+
+            const review = {
+
+                userName:
+                    user.displayName || "Customer",
+
+                userId:
+                    user.uid,
+
+                productId:
+                    productId,
+
+                rating:
+                    selectedRating,
+
+                review:
+                    reviewText.value.trim(),
+
+                date:
+                    new Date().toISOString(),
+
+                featured:false
+
+            };
+
+
+
+            try {
+
+
+                await set(
+
+                    push(
+
+                        ref(
+
+                            database,
+
+                            `reviews/${productId}`
+
+                        )
+
+                    ),
+
+
+                    review
+
+
+                );
+
+
+
+                showToast(
+                    "Review submitted successfully"
+                );
+
+
+
+                reviewText.value = "";
+
+                selectedRating = 0;
+
+
+
+                stars.forEach(star => {
+
+                    star.style.color =
+                        "gray";
+
+                });
+
+
+
+                loadReviews();
+
+
+
+            }
+
+
+
+            catch (error) {
+
+
+                console.log(error);
+
+
+                showToast(
+                    "Review failed"
+                );
+
+
+            }
+
+
+
+        });
+
+
+}
+
+
+
+
 
 // ===============================
 // Load Reviews
 // ===============================
 
-const reviewsContainer = document.getElementById("reviewsContainer");
+async function loadReviews() {
 
-const averageRating = document.getElementById("averageRating");
+    const snapshot = await get(
 
-const totalReviews = document.getElementById("totalReviews");
+        ref(
 
-onValue(ref(database, `reviews/${product.id}`), (snapshot) => {
+            database,
+
+            `reviews/${productId}`
+
+        )
+
+    );
 
     reviewsContainer.innerHTML = "";
 
@@ -513,37 +616,45 @@ onValue(ref(database, `reviews/${product.id}`), (snapshot) => {
 
     }
 
-    const reviews = snapshot.val();
-
     let totalRating = 0;
 
     let count = 0;
 
-    Object.values(reviews).forEach((item) => {
+    snapshot.forEach(child => {
+
+        const review = child.val();
+
+        totalRating += Number(review.rating);
 
         count++;
 
-        totalRating += item.rating;
-
         reviewsContainer.innerHTML += `
 
-        <div class="review-card">
+        <div class="single-review">
 
-            <h4>${item.userName}</h4>
+            <h4>
 
-            <div class="review-stars">
+                ${review.userName || review.name || "Customer"}
 
-                ${"⭐".repeat(item.rating)}
+            </h4>
 
-            </div>
+            <p>
 
-            <p>${item.review}</p>
+                ${"⭐".repeat(review.rating)}
 
-            <div class="review-date">
+            </p>
 
-                ${new Date(item.date).toLocaleDateString()}
+            <p>
 
-            </div>
+                ${review.review || review.comment}
+
+            </p>
+
+            <small>
+
+                ${new Date(review.date).toLocaleDateString()}
+
+            </small>
 
         </div>
 
@@ -551,8 +662,38 @@ onValue(ref(database, `reviews/${product.id}`), (snapshot) => {
 
     });
 
-    averageRating.textContent = (totalRating / count).toFixed(1);
+    if (count === 0) {
+
+        averageRating.textContent = "0.0";
+
+        totalReviews.textContent = "0";
+
+        reviewsContainer.innerHTML = `
+
+        <p class="no-reviews">
+
+            No reviews yet.
+
+        </p>
+
+        `;
+
+        return;
+
+    }
+
+    const average = totalRating / count;
+
+    averageRating.textContent = average.toFixed(1);
 
     totalReviews.textContent = count;
 
-});
+}
+
+
+
+// ===============================
+// Start Reviews
+// ===============================
+
+loadReviews();
