@@ -239,3 +239,1030 @@ table{
 
 
 }
+
+/* ================================================================
+   📱 RESPONSIVE MEDIA QUERIES - Sabhi Devices Ke Liye
+   ================================================================ */
+
+/* ================================================================
+   🔹 Laptop / Small Desktop (1024px - 1200px)
+   ================================================================ */
+
+@media (max-width:1200px) {
+
+    body {
+        padding: 35px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    .user-details-container {
+        max-width: 100%;
+    }
+
+    .profile-card {
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .profile-card h2 {
+        font-size: 24px;
+    }
+
+    .profile-card p {
+        font-size: 15px;
+    }
+
+    table {
+        border-radius: 12px;
+    }
+
+    th {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    td {
+        padding: 13px 14px;
+        font-size: 14px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Tablet (768px - 1024px)
+   ================================================================ */
+
+@media (max-width:1024px) {
+
+    body {
+        padding: 30px 25px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 22px;
+    }
+
+    .profile-card {
+        padding: 22px 25px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+    }
+
+    .profile-card h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .profile-card p {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    /* Profile card grid layout for tablet */
+    .profile-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 30px;
+    }
+
+    .order-title {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 10px;
+        margin: 0 -5px;
+        padding: 0 5px;
+    }
+
+    table {
+        border-radius: 10px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+        min-width: 700px;
+    }
+
+    th {
+        padding: 12px 14px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 11px 14px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Large (600px - 768px)
+   ================================================================ */
+
+@media (max-width:768px) {
+
+    body {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+        margin-bottom: 18px;
+    }
+
+    .profile-card {
+        padding: 18px 20px;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .profile-card h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .profile-card p {
+        font-size: 13px;
+        margin: 8px 0;
+        line-height: 1.6;
+    }
+
+    .profile-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 20px;
+    }
+
+    .order-title {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 8px;
+        margin: 0 -8px;
+        padding: 0 8px;
+    }
+
+    table {
+        border-radius: 8px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        min-width: 600px;
+        font-size: 13px;
+    }
+
+    th {
+        padding: 10px 12px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 10px 12px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    /* Status badge */
+    .status-badge {
+        font-size: 10px;
+        padding: 3px 8px;
+        border-radius: 12px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Small (480px - 600px)
+   ================================================================ */
+
+@media (max-width:600px) {
+
+    body {
+        padding: 15px 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .profile-card {
+        padding: 16px 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .profile-card h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .profile-card p {
+        font-size: 12px;
+        margin: 6px 0;
+        line-height: 1.6;
+        word-break: break-word;
+    }
+
+    .profile-card strong {
+        display: inline-block;
+        min-width: 80px;
+    }
+
+    .profile-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .order-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 6px;
+        margin: 0 -10px;
+        padding: 0 10px;
+    }
+
+    table {
+        border-radius: 6px;
+        min-width: 500px;
+        font-size: 12px;
+    }
+
+    th {
+        padding: 8px 10px;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 8px 10px;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    /* Order ID truncation */
+    td:first-child {
+        font-weight: 600;
+        font-size: 11px;
+    }
+
+    /* Customer name truncation */
+    td:nth-child(2) {
+        max-width: 80px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .status-badge {
+        font-size: 9px;
+        padding: 2px 8px;
+        border-radius: 10px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Extra Small (max-width: 480px)
+   ================================================================ */
+
+@media (max-width:480px) {
+
+    body {
+        padding: 12px 8px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .profile-card {
+        padding: 14px 12px;
+        border-radius: 8px;
+        margin-bottom: 18px;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+    }
+
+    .profile-card h2 {
+        font-size: 17px;
+        margin-bottom: 8px;
+    }
+
+    .profile-card p {
+        font-size: 11px;
+        margin: 5px 0;
+        line-height: 1.5;
+    }
+
+    .profile-card strong {
+        min-width: 70px;
+        font-size: 11px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .order-title {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 6px;
+        margin: 0 -12px;
+        padding: 0 12px;
+    }
+
+    table {
+        border-radius: 6px;
+        min-width: 450px;
+        font-size: 11px;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+    }
+
+    th {
+        padding: 6px 8px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 6px 8px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    td:first-child {
+        font-size: 10px;
+    }
+
+    td:nth-child(2) {
+        max-width: 60px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* Hide less important columns */
+    th:nth-child(4),
+    td:nth-child(4) {
+        display: none;
+    }
+
+    .status-badge {
+        font-size: 8px;
+        padding: 2px 6px;
+        border-radius: 8px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Extra Small Phones (max-width: 360px)
+   ================================================================ */
+
+@media (max-width:360px) {
+
+    body {
+        padding: 10px 5px;
+    }
+
+    h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .profile-card {
+        padding: 12px 10px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+    }
+
+    .profile-card h2 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .profile-card p {
+        font-size: 10px;
+        margin: 4px 0;
+    }
+
+    .profile-card strong {
+        min-width: 60px;
+        font-size: 10px;
+    }
+
+    .order-title {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 4px;
+        margin: 0 -15px;
+        padding: 0 15px;
+    }
+
+    table {
+        border-radius: 4px;
+        min-width: 380px;
+        font-size: 10px;
+    }
+
+    th {
+        padding: 5px 6px;
+        font-size: 9px;
+    }
+
+    td {
+        padding: 5px 6px;
+        font-size: 9px;
+    }
+
+    td:first-child {
+        font-size: 9px;
+    }
+
+    td:nth-child(2) {
+        max-width: 50px;
+    }
+
+    /* Hide more columns */
+    th:nth-child(3),
+    td:nth-child(3) {
+        display: none;
+    }
+
+    .status-badge {
+        font-size: 7px;
+        padding: 1px 5px;
+        border-radius: 6px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Landscape Mode for Mobile Phones (max-height: 500px)
+   ================================================================ */
+
+@media (max-height:500px) and (orientation:landscape) {
+
+    body {
+        padding: 15px 25px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .profile-card {
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .profile-card h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .profile-card p {
+        font-size: 13px;
+        margin: 6px 0;
+    }
+
+    .profile-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px 20px;
+    }
+
+    .order-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 8px;
+    }
+
+    table {
+        border-radius: 8px;
+        min-width: 600px;
+        font-size: 12px;
+    }
+
+    th {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    td {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    td:nth-child(2) {
+        max-width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Very Large Screens (1400px+)
+   ================================================================ */
+
+@media (min-width:1400px) {
+
+    body {
+        padding: 50px 60px;
+    }
+
+    .user-details-container {
+        max-width: 1200px;
+    }
+
+    h1 {
+        font-size: 38px;
+        margin-bottom: 35px;
+    }
+
+    .profile-card {
+        padding: 40px 45px;
+        border-radius: 20px;
+        margin-bottom: 50px;
+        box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+    }
+
+    .profile-card h2 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    .profile-card p {
+        font-size: 18px;
+        margin: 14px 0;
+        line-height: 1.8;
+    }
+
+    .profile-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px 40px;
+    }
+
+    .order-title {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    table {
+        border-radius: 18px;
+        box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+    }
+
+    th {
+        padding: 20px 22px;
+        font-size: 17px;
+    }
+
+    td {
+        padding: 18px 22px;
+        font-size: 16px;
+    }
+
+    .status-badge {
+        font-size: 14px;
+        padding: 6px 16px;
+        border-radius: 20px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Dark Mode Support (Optional)
+   ================================================================ */
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background: #1a1a1a;
+    }
+
+    h1 {
+        color: #fff;
+    }
+
+    .profile-card {
+        background: #2a2a2a;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .profile-card h2 {
+        color: #fff;
+    }
+
+    .profile-card p {
+        color: #ccc;
+    }
+
+    .profile-card strong {
+        color: #fff;
+    }
+
+    .order-title {
+        color: #fff;
+    }
+
+    table {
+        background: #2a2a2a;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    thead {
+        background: #0a0a0a;
+    }
+
+    th {
+        color: #fff;
+    }
+
+    td {
+        color: #ddd;
+        border-bottom-color: #444;
+    }
+
+    tbody tr:hover {
+        background: #333;
+    }
+
+    .status-badge {
+        color: #fff;
+    }
+
+    .status-badge.status-pending {
+        background: #856404;
+        color: #fff;
+    }
+
+    .status-badge.status-delivered {
+        background: #0c5460;
+        color: #fff;
+    }
+
+    .status-badge.status-cancelled {
+        background: #721c24;
+        color: #fff;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Print Styles
+   ================================================================ */
+
+@media print {
+
+    body {
+        background: white !important;
+        padding: 20px !important;
+    }
+
+    h1 {
+        color: #111 !important;
+    }
+
+    .profile-card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        border-radius: 0 !important;
+        padding: 20px !important;
+    }
+
+    .profile-card p {
+        color: #333 !important;
+    }
+
+    table {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        border-radius: 0 !important;
+    }
+
+    thead {
+        background: #111 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    th {
+        color: white !important;
+    }
+
+    td {
+        border-bottom: 1px solid #ddd !important;
+        color: #333 !important;
+    }
+
+    tbody tr:hover {
+        background: transparent !important;
+    }
+
+    .status-badge {
+        background: #111 !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Reduced Motion (Accessibility)
+   ================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    tbody tr {
+        transition: none !important;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Additional Helper Classes
+   ================================================================ */
+
+/* ===== Status Badge ===== */
+.status-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    min-width: 70px;
+}
+
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-processing {
+    background: #cce5ff;
+    color: #004085;
+}
+
+.status-shipped {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-delivered {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.status-cancelled {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+@media (max-width:600px) {
+    .status-badge {
+        font-size: 9px;
+        padding: 2px 8px;
+        border-radius: 12px;
+        min-width: 50px;
+    }
+}
+
+/* ===== Back Button ===== */
+.back-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s;
+    margin-bottom: 25px;
+}
+
+.back-btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+.back-btn i {
+    margin-right: 8px;
+}
+
+@media (max-width:768px) {
+    .back-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+        border-radius: 6px;
+        margin-bottom: 18px;
+        width: 100%;
+        text-align: center;
+    }
+    .back-btn:hover {
+        transform: none;
+    }
+}
+
+@media (max-width:480px) {
+    .back-btn {
+        padding: 7px 14px;
+        font-size: 12px;
+    }
+}
+
+/* ===== Avatar / User Icon ===== */
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #8B5E3C;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.user-avatar.large {
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+}
+
+.user-avatar.small {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+}
+
+@media (max-width:600px) {
+    .user-avatar {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+    .user-avatar.large {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
+}
+
+/* ===== Empty Orders State ===== */
+.empty-orders {
+    text-align: center;
+    padding: 40px 20px;
+    color: #777;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.empty-orders i {
+    font-size: 50px;
+    color: #ddd;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.empty-orders h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.empty-orders p {
+    font-size: 15px;
+    color: #999;
+}
+
+@media (max-width:600px) {
+    .empty-orders {
+        padding: 30px 15px;
+        border-radius: 10px;
+    }
+    .empty-orders i {
+        font-size: 40px;
+    }
+    .empty-orders h3 {
+        font-size: 17px;
+    }
+    .empty-orders p {
+        font-size: 13px;
+    }
+}
+
+/* ===== Loading State ===== */
+.loading {
+    text-align: center;
+    padding: 40px 20px;
+    color: #888;
+}
+
+.loading i {
+    font-size: 30px;
+    color: #8B5E3C;
+    margin-bottom: 15px;
+    display: block;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width:600px) {
+    .loading {
+        padding: 30px 15px;
+        font-size: 14px;
+    }
+    .loading i {
+        font-size: 24px;
+    }
+}
+
+/* ===== Profile Card Grid Layout ===== */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 30px;
+}
+
+.profile-grid .full-width {
+    grid-column: 1 / -1;
+}
+
+@media (max-width:768px) {
+    .profile-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 20px;
+    }
+}
+
+@media (max-width:600px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+}

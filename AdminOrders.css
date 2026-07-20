@@ -240,3 +240,799 @@ h1{
 
 
 }
+
+/* ================================================================
+   📱 RESPONSIVE MEDIA QUERIES - Sabhi Devices Ke Liye
+   ================================================================ */
+
+/* ================================================================
+   🔹 Laptop / Small Desktop (1024px - 1200px)
+   ================================================================ */
+
+@media (max-width:1200px) {
+
+    body {
+        padding: 35px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    table {
+        border-radius: 10px;
+    }
+
+    th {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    td {
+        padding: 13px 14px;
+        font-size: 14px;
+    }
+
+    select {
+        padding: 7px 10px;
+        font-size: 13px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 13px;
+        border-radius: 6px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Tablet (768px - 1024px)
+   ================================================================ */
+
+@media (max-width:1024px) {
+
+    body {
+        padding: 30px 25px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 28px;
+    }
+
+    table {
+        border-radius: 10px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    th {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    td {
+        padding: 11px 12px;
+        font-size: 13px;
+    }
+
+    /* Table scroll for tablets */
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 10px;
+    }
+
+    select {
+        padding: 6px 10px;
+        font-size: 12px;
+        border-radius: 5px;
+        min-width: 100px;
+    }
+
+    button {
+        padding: 7px 14px;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        transform: translateY(-1px);
+    }
+
+    td[colspan="6"] {
+        padding: 30px;
+        font-size: 16px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Large (600px - 768px)
+   ================================================================ */
+
+@media (max-width:768px) {
+
+    body {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+        margin-bottom: 22px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 8px;
+        margin: 0 -5px;
+        padding: 0 5px;
+    }
+
+    table {
+        border-radius: 8px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        min-width: 650px;
+        font-size: 13px;
+    }
+
+    th {
+        padding: 10px 12px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 10px 12px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    select {
+        padding: 5px 8px;
+        font-size: 11px;
+        border-radius: 4px;
+        min-width: 90px;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 11px;
+        border-radius: 4px;
+    }
+
+    button:hover {
+        transform: none;
+    }
+
+    td[colspan="6"] {
+        padding: 25px;
+        font-size: 15px;
+    }
+
+    /* Status badge styles for mobile */
+    .status-badge {
+        font-size: 10px;
+        padding: 3px 8px;
+        border-radius: 12px;
+        display: inline-block;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Small (480px - 600px)
+   ================================================================ */
+
+@media (max-width:600px) {
+
+    body {
+        padding: 15px 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 6px;
+        margin: 0 -8px;
+        padding: 0 8px;
+    }
+
+    table {
+        border-radius: 6px;
+        min-width: 550px;
+        font-size: 12px;
+    }
+
+    th {
+        padding: 8px 10px;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 8px 10px;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    select {
+        padding: 4px 6px;
+        font-size: 10px;
+        border-radius: 4px;
+        min-width: 80px;
+        height: 28px;
+    }
+
+    button {
+        padding: 5px 10px;
+        font-size: 10px;
+        border-radius: 4px;
+        height: 28px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    td[colspan="6"] {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    /* Add filter/search controls */
+    .controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .controls input,
+    .controls select {
+        width: 100%;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Extra Small (max-width: 480px)
+   ================================================================ */
+
+@media (max-width:480px) {
+
+    body {
+        padding: 12px 8px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 6px;
+        margin: 0 -10px;
+        padding: 0 10px;
+    }
+
+    table {
+        border-radius: 6px;
+        min-width: 500px;
+        font-size: 11px;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+    }
+
+    th {
+        padding: 6px 8px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 6px 8px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    select {
+        padding: 3px 5px;
+        font-size: 9px;
+        border-radius: 3px;
+        min-width: 70px;
+        height: 24px;
+    }
+
+    button {
+        padding: 4px 8px;
+        font-size: 9px;
+        border-radius: 3px;
+        height: 24px;
+        font-weight: 500;
+    }
+
+    td[colspan="6"] {
+        padding: 15px;
+        font-size: 13px;
+    }
+
+    /* Order ID and customer name truncation */
+    td:first-child {
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    td:nth-child(2) {
+        max-width: 80px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Extra Small Phones (max-width: 360px)
+   ================================================================ */
+
+@media (max-width:360px) {
+
+    body {
+        padding: 10px 5px;
+    }
+
+    h1 {
+        font-size: 18px;
+        margin-bottom: 14px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 4px;
+        margin: 0 -12px;
+        padding: 0 12px;
+    }
+
+    table {
+        border-radius: 4px;
+        min-width: 450px;
+        font-size: 10px;
+    }
+
+    th {
+        padding: 5px 6px;
+        font-size: 9px;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 5px 6px;
+        font-size: 9px;
+        white-space: nowrap;
+    }
+
+    select {
+        padding: 2px 4px;
+        font-size: 8px;
+        border-radius: 3px;
+        min-width: 60px;
+        height: 20px;
+    }
+
+    button {
+        padding: 3px 6px;
+        font-size: 8px;
+        border-radius: 3px;
+        height: 20px;
+        font-weight: 500;
+    }
+
+    td[colspan="6"] {
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    /* Hide less important columns on very small screens */
+    th:nth-child(4),
+    td:nth-child(4) {
+        display: none;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Landscape Mode for Mobile Phones (max-height: 500px)
+   ================================================================ */
+
+@media (max-height:500px) and (orientation:landscape) {
+
+    body {
+        padding: 15px 25px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 8px;
+    }
+
+    table {
+        border-radius: 8px;
+        min-width: 600px;
+    }
+
+    th {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    td {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    select {
+        padding: 5px 8px;
+        font-size: 11px;
+        min-width: 80px;
+        height: 26px;
+    }
+
+    button {
+        padding: 5px 12px;
+        font-size: 11px;
+        height: 26px;
+    }
+
+    td[colspan="6"] {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Very Large Screens (1400px+)
+   ================================================================ */
+
+@media (min-width:1400px) {
+
+    body {
+        padding: 50px 60px;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 38px;
+        margin-bottom: 40px;
+    }
+
+    table {
+        border-radius: 16px;
+        box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+    }
+
+    th {
+        padding: 20px 22px;
+        font-size: 17px;
+    }
+
+    td {
+        padding: 18px 22px;
+        font-size: 16px;
+    }
+
+    select {
+        padding: 10px 14px;
+        font-size: 15px;
+        border-radius: 8px;
+        min-width: 140px;
+    }
+
+    button {
+        padding: 11px 22px;
+        font-size: 15px;
+        border-radius: 8px;
+    }
+
+    button:hover {
+        transform: translateY(-3px);
+    }
+
+    td[colspan="6"] {
+        padding: 50px;
+        font-size: 20px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Dark Mode Support (Optional)
+   ================================================================ */
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background: #1a1a1a;
+    }
+
+    h1 {
+        color: #fff;
+    }
+
+    table {
+        background: #2a2a2a;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    thead {
+        background: #0a0a0a;
+    }
+
+    th {
+        color: #fff;
+    }
+
+    td {
+        color: #ddd;
+        border-bottom-color: #444;
+    }
+
+    tbody tr:hover {
+        background: #333;
+    }
+
+    select {
+        background: #3a3a3a;
+        color: #fff;
+        border-color: #555;
+    }
+
+    select:focus {
+        border-color: #FFD166;
+    }
+
+    select option {
+        background: #2a2a2a;
+        color: #fff;
+    }
+
+    button {
+        background: #FFD166;
+        color: #111;
+    }
+
+    button:hover {
+        background: #fff;
+        color: #111;
+    }
+
+    td[colspan="6"] {
+        color: #999;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Print Styles
+   ================================================================ */
+
+@media print {
+
+    body {
+        background: white !important;
+        padding: 20px !important;
+    }
+
+    h1 {
+        color: #111 !important;
+    }
+
+    table {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        border-radius: 0 !important;
+    }
+
+    thead {
+        background: #111 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    th {
+        color: white !important;
+    }
+
+    td {
+        border-bottom: 1px solid #ddd !important;
+        color: #333 !important;
+    }
+
+    select,
+    button {
+        display: none !important;
+    }
+
+    tbody tr:hover {
+        background: transparent !important;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Reduced Motion (Accessibility)
+   ================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    tbody tr,
+    button {
+        transition: none !important;
+    }
+
+    button:hover {
+        transform: none !important;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Additional Helper Classes
+   ================================================================ */
+
+/* Filter/Search Controls */
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.controls input,
+.controls select {
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    background: white;
+    transition: 0.3s;
+}
+
+.controls input:focus,
+.controls select:focus {
+    border-color: #111;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+}
+
+.controls input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.controls select {
+    min-width: 150px;
+}
+
+@media (max-width:768px) {
+    .controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .controls input,
+    .controls select {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+/* Status Badge Colors */
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-processing {
+    background: #cce5ff;
+    color: #004085;
+}
+
+.status-shipped {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-delivered {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.status-cancelled {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+@media (max-width:600px) {
+    .status-badge {
+        font-size: 10px;
+        padding: 2px 8px;
+        border-radius: 12px;
+    }
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    padding: 8px 16px;
+    background: white;
+    color: #111;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pagination button:hover {
+    background: #111;
+    color: white;
+    transform: none;
+}
+
+.pagination .active {
+    background: #111;
+    color: white;
+    border-color: #111;
+}
+
+@media (max-width:600px) {
+    .pagination {
+        gap: 6px;
+    }
+    .pagination button {
+        padding: 6px 12px;
+        font-size: 12px;
+        min-width: 35px;
+    }
+}

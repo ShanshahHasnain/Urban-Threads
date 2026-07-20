@@ -313,3 +313,967 @@ h1{
 
 
 }
+
+/* ================================================================
+   📱 RESPONSIVE MEDIA QUERIES - Sabhi Devices Ke Liye
+   ================================================================ */
+
+/* ================================================================
+   🔹 Laptop / Small Desktop (1024px - 1200px)
+   ================================================================ */
+
+@media (max-width:1200px) {
+
+    body {
+        padding: 35px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    .top-bar {
+        max-width: 100%;
+        margin: 0 auto 20px;
+    }
+
+    #addProductBtn {
+        padding: 11px 22px;
+        font-size: 14px;
+        border-radius: 7px;
+    }
+
+    table {
+        border-radius: 12px;
+        max-width: 100%;
+    }
+
+    th {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    td {
+        padding: 13px 14px;
+        font-size: 14px;
+    }
+
+    td img {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+    }
+
+    .action-btn {
+        padding: 7px 12px;
+        font-size: 13px;
+        border-radius: 5px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Tablet (768px - 1024px)
+   ================================================================ */
+
+@media (max-width:1024px) {
+
+    body {
+        padding: 30px 25px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 22px;
+    }
+
+    .top-bar {
+        margin: 0 auto 18px;
+        padding: 0 5px;
+    }
+
+    #addProductBtn {
+        padding: 10px 20px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+
+    #addProductBtn:hover {
+        transform: translateY(-1px);
+    }
+
+    /* Table wrapper for scroll */
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 10px;
+        margin: 0 -5px;
+        padding: 0 5px;
+    }
+
+    table {
+        border-radius: 10px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        min-width: 750px;
+    }
+
+    th {
+        padding: 12px 14px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 11px 14px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    td img {
+        width: 55px;
+        height: 55px;
+        border-radius: 8px;
+    }
+
+    .action-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+        border-radius: 5px;
+        margin-right: 3px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Large (600px - 768px)
+   ================================================================ */
+
+@media (max-width:768px) {
+
+    body {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+        margin-bottom: 18px;
+    }
+
+    .top-bar {
+        margin: 0 auto 15px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #addProductBtn {
+        padding: 10px 18px;
+        font-size: 13px;
+        border-radius: 6px;
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+    }
+
+    #addProductBtn:hover {
+        transform: none;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 8px;
+        margin: 0 -8px;
+        padding: 0 8px;
+    }
+
+    table {
+        border-radius: 8px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        min-width: 650px;
+        font-size: 13px;
+    }
+
+    th {
+        padding: 10px 12px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 10px 12px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    td img {
+        width: 50px;
+        height: 50px;
+        border-radius: 6px;
+    }
+
+    .action-btn {
+        padding: 5px 10px;
+        font-size: 11px;
+        border-radius: 4px;
+        margin-right: 2px;
+        margin-bottom: 3px;
+    }
+
+    .action-btn:last-child {
+        margin-right: 0;
+    }
+
+    /* Product name truncation */
+    td:nth-child(2) {
+        max-width: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* Price formatting */
+    td:nth-child(3),
+    td:nth-child(4) {
+        font-weight: 500;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Small (480px - 600px)
+   ================================================================ */
+
+@media (max-width:600px) {
+
+    body {
+        padding: 15px 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .top-bar {
+        margin: 0 auto 12px;
+        justify-content: center;
+    }
+
+    #addProductBtn {
+        padding: 9px 16px;
+        font-size: 12px;
+        border-radius: 5px;
+        max-width: 170px;
+        width: 100%;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 6px;
+        margin: 0 -10px;
+        padding: 0 10px;
+    }
+
+    table {
+        border-radius: 6px;
+        min-width: 550px;
+        font-size: 12px;
+    }
+
+    th {
+        padding: 8px 10px;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 8px 10px;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    td img {
+        width: 42px;
+        height: 42px;
+        border-radius: 5px;
+    }
+
+    .action-btn {
+        padding: 4px 8px;
+        font-size: 10px;
+        border-radius: 4px;
+        margin-right: 2px;
+        display: inline-block;
+    }
+
+    .action-btn i {
+        font-size: 10px;
+        margin-right: 2px;
+    }
+
+    /* Hide button text on very small screens, show only icons */
+    .action-btn span {
+        display: none;
+    }
+
+    .action-btn i {
+        margin-right: 0;
+    }
+
+    /* Stock status indicator */
+    .stock-low {
+        color: #dc2626;
+        font-weight: 600;
+    }
+
+    .stock-high {
+        color: #16a34a;
+        font-weight: 600;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Extra Small (max-width: 480px)
+   ================================================================ */
+
+@media (max-width:480px) {
+
+    body {
+        padding: 12px 8px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .top-bar {
+        margin: 0 auto 10px;
+    }
+
+    #addProductBtn {
+        padding: 8px 14px;
+        font-size: 11px;
+        border-radius: 5px;
+        max-width: 150px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 6px;
+        margin: 0 -12px;
+        padding: 0 12px;
+    }
+
+    table {
+        border-radius: 6px;
+        min-width: 480px;
+        font-size: 11px;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+    }
+
+    th {
+        padding: 6px 8px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 6px 8px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    td img {
+        width: 35px;
+        height: 35px;
+        border-radius: 4px;
+    }
+
+    .action-btn {
+        padding: 3px 6px;
+        font-size: 9px;
+        border-radius: 3px;
+        margin-right: 1px;
+        min-width: 22px;
+        text-align: center;
+    }
+
+    .action-btn i {
+        font-size: 9px;
+    }
+
+    /* Hide less important columns */
+    th:nth-child(3),
+    td:nth-child(3) {
+        display: none;
+    }
+
+    th:nth-child(5),
+    td:nth-child(5) {
+        display: none;
+    }
+
+    /* Product name truncation */
+    td:nth-child(2) {
+        max-width: 80px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Extra Small Phones (max-width: 360px)
+   ================================================================ */
+
+@media (max-width:360px) {
+
+    body {
+        padding: 10px 5px;
+    }
+
+    h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    #addProductBtn {
+        padding: 7px 12px;
+        font-size: 10px;
+        max-width: 130px;
+        border-radius: 4px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 4px;
+        margin: 0 -15px;
+        padding: 0 15px;
+    }
+
+    table {
+        border-radius: 4px;
+        min-width: 400px;
+        font-size: 10px;
+    }
+
+    th {
+        padding: 5px 6px;
+        font-size: 9px;
+    }
+
+    td {
+        padding: 5px 6px;
+        font-size: 9px;
+    }
+
+    td img {
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+    }
+
+    .action-btn {
+        padding: 2px 5px;
+        font-size: 8px;
+        border-radius: 3px;
+        min-width: 18px;
+    }
+
+    .action-btn i {
+        font-size: 8px;
+    }
+
+    /* Hide more columns */
+    th:nth-child(4),
+    td:nth-child(4) {
+        display: none;
+    }
+
+    td:nth-child(2) {
+        max-width: 60px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Landscape Mode for Mobile Phones (max-height: 500px)
+   ================================================================ */
+
+@media (max-height:500px) and (orientation:landscape) {
+
+    body {
+        padding: 15px 25px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .top-bar {
+        margin: 0 auto 12px;
+    }
+
+    #addProductBtn {
+        padding: 8px 18px;
+        font-size: 13px;
+        border-radius: 5px;
+        max-width: 180px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 8px;
+    }
+
+    table {
+        border-radius: 8px;
+        min-width: 600px;
+        font-size: 12px;
+    }
+
+    th {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    td {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    td img {
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+    }
+
+    .action-btn {
+        padding: 5px 10px;
+        font-size: 11px;
+        border-radius: 4px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Very Large Screens (1400px+)
+   ================================================================ */
+
+@media (min-width:1400px) {
+
+    body {
+        padding: 50px 60px;
+    }
+
+    h1 {
+        font-size: 38px;
+        margin-bottom: 35px;
+    }
+
+    .top-bar {
+        max-width: 1300px;
+        margin: 0 auto 30px;
+    }
+
+    #addProductBtn {
+        padding: 15px 32px;
+        font-size: 17px;
+        border-radius: 10px;
+    }
+
+    #addProductBtn:hover {
+        transform: translateY(-3px);
+    }
+
+    table {
+        max-width: 1300px;
+        border-radius: 18px;
+        box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+    }
+
+    th {
+        padding: 20px 22px;
+        font-size: 17px;
+    }
+
+    td {
+        padding: 18px 22px;
+        font-size: 16px;
+    }
+
+    td img {
+        width: 80px;
+        height: 80px;
+        border-radius: 12px;
+    }
+
+    .action-btn {
+        padding: 10px 18px;
+        font-size: 15px;
+        border-radius: 8px;
+        margin-right: 8px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Dark Mode Support (Optional)
+   ================================================================ */
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background: #1a1a1a;
+    }
+
+    h1 {
+        color: #fff;
+    }
+
+    #addProductBtn {
+        background: #FFD166;
+        color: #111;
+    }
+
+    #addProductBtn:hover {
+        background: #fff;
+        color: #111;
+    }
+
+    table {
+        background: #2a2a2a;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    thead {
+        background: #0a0a0a;
+    }
+
+    th {
+        color: #fff;
+    }
+
+    td {
+        color: #ddd;
+        border-bottom-color: #444;
+    }
+
+    tbody tr:hover {
+        background: #333;
+    }
+
+    .edit-btn {
+        background: #3b82f6;
+        color: #fff;
+    }
+
+    .delete-btn {
+        background: #ef4444;
+        color: #fff;
+    }
+
+    .action-btn:hover {
+        opacity: 0.8;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Print Styles
+   ================================================================ */
+
+@media print {
+
+    body {
+        background: white !important;
+        padding: 20px !important;
+    }
+
+    h1 {
+        color: #111 !important;
+    }
+
+    .top-bar {
+        display: none !important;
+    }
+
+    table {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        border-radius: 0 !important;
+    }
+
+    thead {
+        background: #111 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    th {
+        color: white !important;
+    }
+
+    td {
+        border-bottom: 1px solid #ddd !important;
+        color: #333 !important;
+    }
+
+    .action-btn {
+        display: none !important;
+    }
+
+    tbody tr:hover {
+        background: transparent !important;
+    }
+
+    td img {
+        border: 1px solid #ddd !important;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Reduced Motion (Accessibility)
+   ================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #addProductBtn,
+    .action-btn,
+    tbody tr {
+        transition: none !important;
+    }
+
+    #addProductBtn:hover {
+        transform: none !important;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Additional Helper Classes
+   ================================================================ */
+
+/* Search/Filter Bar */
+.search-bar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    min-width: 200px;
+    transition: .3s;
+}
+
+.search-bar input:focus {
+    border-color: #111;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+}
+
+.search-bar select {
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+    min-width: 130px;
+}
+
+.search-bar select:focus {
+    border-color: #111;
+}
+
+@media (max-width:768px) {
+    .search-bar {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .search-bar input,
+    .search-bar select {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+/* Stock Status Badge */
+.stock-badge {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.stock-in {
+    background: #d4edda;
+    color: #155724;
+}
+
+.stock-low {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.stock-out {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+@media (max-width:600px) {
+    .stock-badge {
+        font-size: 9px;
+        padding: 2px 6px;
+        border-radius: 12px;
+    }
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pagination button {
+    padding: 8px 14px;
+    background: white;
+    color: #111;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: 500;
+}
+
+.pagination button:hover {
+    background: #111;
+    color: white;
+}
+
+.pagination .active {
+    background: #111;
+    color: white;
+    border-color: #111;
+}
+
+@media (max-width:600px) {
+    .pagination {
+        gap: 5px;
+    }
+    .pagination button {
+        padding: 5px 10px;
+        font-size: 12px;
+        min-width: 32px;
+    }
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    color: #777;
+}
+
+.empty-state i {
+    font-size: 60px;
+    color: #ddd;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.empty-state h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    font-size: 16px;
+    color: #999;
+}
+
+@media (max-width:600px) {
+    .empty-state {
+        padding: 30px 15px;
+    }
+    .empty-state i {
+        font-size: 40px;
+    }
+    .empty-state h3 {
+        font-size: 18px;
+    }
+    .empty-state p {
+        font-size: 14px;
+    }
+}
+
+/* Loading State */
+.loading {
+    text-align: center;
+    padding: 40px 20px;
+    color: #888;
+}
+
+.loading i {
+    font-size: 30px;
+    color: #8B5E3C;
+    margin-bottom: 15px;
+    display: block;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width:600px) {
+    .loading {
+        padding: 30px 15px;
+        font-size: 14px;
+    }
+    .loading i {
+        font-size: 24px;
+    }
+}

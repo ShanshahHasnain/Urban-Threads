@@ -96,3 +96,920 @@ tbody tr:hover{
     }
 
 }
+
+/* ================================================================
+   📱 RESPONSIVE MEDIA QUERIES - Sabhi Devices Ke Liye
+   ================================================================ */
+
+/* ================================================================
+   🔹 Laptop / Small Desktop (1024px - 1200px)
+   ================================================================ */
+
+@media (max-width:1200px) {
+
+    body {
+        padding: 35px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    .reviews-container {
+        padding: 22px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    }
+
+    th {
+        padding: 13px;
+        font-size: 14px;
+    }
+
+    td {
+        padding: 13px;
+        font-size: 14px;
+    }
+
+    .delete-review-btn {
+        padding: 7px 14px;
+        font-size: 13px;
+        border-radius: 5px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Tablet (768px - 1024px)
+   ================================================================ */
+
+@media (max-width:1024px) {
+
+    body {
+        padding: 30px 25px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 22px;
+    }
+
+    .reviews-container {
+        padding: 18px;
+        border-radius: 10px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 8px;
+        margin: 0 -5px;
+        padding: 0 5px;
+    }
+
+    table {
+        min-width: 750px;
+        font-size: 14px;
+    }
+
+    th {
+        padding: 12px 14px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 12px 14px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    /* Review text truncation */
+    td:nth-child(3) {
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .delete-review-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Large (600px - 768px)
+   ================================================================ */
+
+@media (max-width:768px) {
+
+    body {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+        margin-bottom: 18px;
+    }
+
+    .reviews-container {
+        padding: 15px 12px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 6px;
+        margin: 0 -8px;
+        padding: 0 8px;
+    }
+
+    table {
+        min-width: 650px;
+        font-size: 13px;
+    }
+
+    th {
+        padding: 10px 12px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 10px 12px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    /* Review text truncation */
+    td:nth-child(3) {
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* Rating stars */
+    .stars {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .delete-review-btn {
+        padding: 5px 10px;
+        font-size: 11px;
+        border-radius: 4px;
+    }
+
+    .delete-review-btn i {
+        font-size: 12px;
+        margin-right: 3px;
+    }
+
+    /* Hide button text on mobile, show icon */
+    .delete-review-btn span {
+        display: none;
+    }
+
+    .delete-review-btn i {
+        margin-right: 0;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Small (480px - 600px)
+   ================================================================ */
+
+@media (max-width:600px) {
+
+    body {
+        padding: 15px 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .reviews-container {
+        padding: 12px 10px;
+        border-radius: 8px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 6px;
+        margin: 0 -10px;
+        padding: 0 10px;
+    }
+
+    table {
+        min-width: 550px;
+        font-size: 12px;
+    }
+
+    th {
+        padding: 8px 10px;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 8px 10px;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    td:nth-child(3) {
+        max-width: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* Customer name truncation */
+    td:nth-child(2) {
+        max-width: 80px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .stars {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+
+    .delete-review-btn {
+        padding: 4px 8px;
+        font-size: 10px;
+        border-radius: 4px;
+        min-width: 28px;
+        text-align: center;
+    }
+
+    .delete-review-btn i {
+        font-size: 11px;
+    }
+
+    /* Hide button text, show icon only */
+    .delete-review-btn span {
+        display: none;
+    }
+
+    .delete-review-btn i {
+        margin-right: 0;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Extra Small (max-width: 480px)
+   ================================================================ */
+
+@media (max-width:480px) {
+
+    body {
+        padding: 12px 8px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .reviews-container {
+        padding: 10px 8px;
+        border-radius: 6px;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 4px;
+        margin: 0 -12px;
+        padding: 0 12px;
+    }
+
+    table {
+        min-width: 480px;
+        font-size: 11px;
+    }
+
+    th {
+        padding: 6px 8px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 6px 8px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    td:nth-child(3) {
+        max-width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    td:nth-child(2) {
+        max-width: 60px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* Hide product column on very small screens */
+    th:nth-child(1),
+    td:nth-child(1) {
+        display: none;
+    }
+
+    .stars {
+        font-size: 10px;
+        letter-spacing: 0px;
+    }
+
+    .delete-review-btn {
+        padding: 3px 6px;
+        font-size: 9px;
+        border-radius: 3px;
+        min-width: 24px;
+    }
+
+    .delete-review-btn i {
+        font-size: 10px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Extra Small Phones (max-width: 360px)
+   ================================================================ */
+
+@media (max-width:360px) {
+
+    body {
+        padding: 10px 5px;
+    }
+
+    h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .reviews-container {
+        padding: 8px 6px;
+        border-radius: 4px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 4px;
+        margin: 0 -15px;
+        padding: 0 15px;
+    }
+
+    table {
+        min-width: 400px;
+        font-size: 10px;
+    }
+
+    th {
+        padding: 5px 6px;
+        font-size: 9px;
+    }
+
+    td {
+        padding: 5px 6px;
+        font-size: 9px;
+    }
+
+    td:nth-child(3) {
+        max-width: 80px;
+    }
+
+    td:nth-child(2) {
+        max-width: 50px;
+    }
+
+    /* Hide rating column on very small screens */
+    th:nth-child(4),
+    td:nth-child(4) {
+        display: none;
+    }
+
+    .stars {
+        font-size: 9px;
+    }
+
+    .delete-review-btn {
+        padding: 2px 5px;
+        font-size: 8px;
+        border-radius: 3px;
+        min-width: 20px;
+    }
+
+    .delete-review-btn i {
+        font-size: 9px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Landscape Mode for Mobile Phones (max-height: 500px)
+   ================================================================ */
+
+@media (max-height:500px) and (orientation:landscape) {
+
+    body {
+        padding: 15px 25px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .reviews-container {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 6px;
+    }
+
+    table {
+        min-width: 650px;
+        font-size: 12px;
+    }
+
+    th {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    td {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    td:nth-child(3) {
+        max-width: 180px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .delete-review-btn {
+        padding: 5px 10px;
+        font-size: 11px;
+        border-radius: 4px;
+    }
+
+    .delete-review-btn span {
+        display: inline;
+    }
+
+    .delete-review-btn i {
+        margin-right: 4px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Very Large Screens (1400px+)
+   ================================================================ */
+
+@media (min-width:1400px) {
+
+    body {
+        padding: 50px 60px;
+    }
+
+    h1 {
+        font-size: 38px;
+        margin-bottom: 35px;
+    }
+
+    .reviews-container {
+        max-width: 1300px;
+        padding: 35px;
+        border-radius: 20px;
+        box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+    }
+
+    th {
+        padding: 20px 22px;
+        font-size: 17px;
+    }
+
+    td {
+        padding: 18px 22px;
+        font-size: 16px;
+    }
+
+    .delete-review-btn {
+        padding: 10px 20px;
+        font-size: 15px;
+        border-radius: 8px;
+    }
+
+    .delete-review-btn:hover {
+        transform: translateY(-2px);
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Dark Mode Support (Optional)
+   ================================================================ */
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background: #1a1a1a;
+    }
+
+    h1 {
+        color: #fff;
+    }
+
+    .reviews-container {
+        background: #2a2a2a;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    thead {
+        background: #0a0a0a;
+    }
+
+    th {
+        color: #fff;
+    }
+
+    td {
+        color: #ddd;
+        border-bottom-color: #444;
+    }
+
+    tbody tr:hover {
+        background: #333;
+    }
+
+    .delete-review-btn {
+        background: #e53935;
+        color: #fff;
+    }
+
+    .delete-review-btn:hover {
+        background: #c62828;
+    }
+
+    .stars {
+        color: #f4b400;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Print Styles
+   ================================================================ */
+
+@media print {
+
+    body {
+        background: white !important;
+        padding: 20px !important;
+    }
+
+    h1 {
+        color: #111 !important;
+    }
+
+    .reviews-container {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        border-radius: 0 !important;
+        padding: 15px !important;
+    }
+
+    thead {
+        background: #111 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    th {
+        color: white !important;
+    }
+
+    td {
+        border-bottom: 1px solid #ddd !important;
+        color: #333 !important;
+    }
+
+    .delete-review-btn {
+        display: none !important;
+    }
+
+    tbody tr:hover {
+        background: transparent !important;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Reduced Motion (Accessibility)
+   ================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .delete-review-btn,
+    tbody tr {
+        transition: none !important;
+    }
+
+    .delete-review-btn:hover {
+        transform: none !important;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Additional Helper Classes
+   ================================================================ */
+
+/* ===== Rating Stars ===== */
+.stars {
+    color: #f4b400;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.stars .empty {
+    color: #ddd;
+}
+
+/* ===== Filter/Search Controls ===== */
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.controls input,
+.controls select {
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    background: white;
+    transition: .3s;
+}
+
+.controls input:focus,
+.controls select:focus {
+    border-color: #111;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+}
+
+.controls input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.controls select {
+    min-width: 150px;
+    cursor: pointer;
+}
+
+@media (max-width:768px) {
+    .controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .controls input,
+    .controls select {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+/* ===== Pagination ===== */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    padding: 8px 14px;
+    background: white;
+    color: #111;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: 500;
+}
+
+.pagination button:hover {
+    background: #111;
+    color: white;
+}
+
+.pagination .active {
+    background: #111;
+    color: white;
+    border-color: #111;
+}
+
+@media (max-width:600px) {
+    .pagination {
+        gap: 5px;
+    }
+    .pagination button {
+        padding: 5px 10px;
+        font-size: 12px;
+        min-width: 32px;
+    }
+}
+
+/* ===== Empty State ===== */
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    color: #777;
+}
+
+.empty-state i {
+    font-size: 60px;
+    color: #ddd;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.empty-state h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    font-size: 16px;
+    color: #999;
+}
+
+@media (max-width:600px) {
+    .empty-state {
+        padding: 30px 15px;
+    }
+    .empty-state i {
+        font-size: 40px;
+    }
+    .empty-state h3 {
+        font-size: 18px;
+    }
+    .empty-state p {
+        font-size: 14px;
+    }
+}
+
+/* ===== Loading State ===== */
+.loading {
+    text-align: center;
+    padding: 40px 20px;
+    color: #888;
+}
+
+.loading i {
+    font-size: 30px;
+    color: #8B5E3C;
+    margin-bottom: 15px;
+    display: block;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width:600px) {
+    .loading {
+        padding: 30px 15px;
+        font-size: 14px;
+    }
+    .loading i {
+        font-size: 24px;
+    }
+}
+
+/* ===== Review Status Badge ===== */
+.review-status {
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-approved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-rejected {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+@media (max-width:600px) {
+    .review-status {
+        font-size: 9px;
+        padding: 2px 8px;
+        border-radius: 12px;
+    }
+}
+
+/* ===== Review Text Truncation with Read More ===== */
+.review-text {
+    max-width: 250px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+.review-text.expanded {
+    overflow: visible;
+}
+
+.read-more {
+    color: #8B5E3C;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+@media (max-width:768px) {
+    .review-text {
+        max-width: 150px;
+    }
+}
+
+@media (max-width:600px) {
+    .review-text {
+        max-width: 100px;
+    }
+}
+
+@media (max-width:480px) {
+    .review-text {
+        max-width: 80px;
+    }
+}

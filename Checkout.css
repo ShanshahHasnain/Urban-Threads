@@ -348,3 +348,1049 @@ h1{
 
 
 }
+
+/* ================================================================
+   📱 RESPONSIVE MEDIA QUERIES - Checkout Page
+   ================================================================ */
+
+/* ================================================================
+   🔹 Tablet (768px - 1024px)
+   ================================================================ */
+
+@media (max-width:1024px) {
+
+    body {
+        padding: 35px 25px;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+
+    .checkout-box {
+        max-width: 600px;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .checkout-box input,
+    .checkout-box textarea {
+        padding: 13px;
+        margin-bottom: 15px;
+        font-size: 14px;
+        border-radius: 7px;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    #orderSummary {
+        padding: 18px;
+        border-radius: 8px;
+    }
+
+    .order-item {
+        padding: 8px 0;
+        font-size: 14px;
+    }
+
+    .checkout-box h2 {
+        font-size: 20px;
+        margin: 18px 0;
+    }
+
+    #placeOrderBtn {
+        padding: 14px;
+        font-size: 16px;
+        border-radius: 7px;
+    }
+
+    /* Payment Section */
+    .payment-section {
+        padding: 18px;
+        margin-top: 25px;
+        border-radius: 10px;
+    }
+
+    .payment-section h3 {
+        font-size: 18px;
+    }
+
+    .payment-option {
+        font-size: 15px;
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+
+    .jazzcash-section {
+        padding: 18px;
+        margin-top: 18px;
+        border-radius: 10px;
+    }
+
+    .qr-image {
+        width: 180px;
+        height: 180px;
+        margin: 15px auto;
+    }
+
+    .jazzcash-section p {
+        font-size: 14px;
+    }
+
+    #paymentReceipt {
+        padding: 8px;
+        font-size: 14px;
+        margin-top: 12px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Large (600px - 768px)
+   ================================================================ */
+
+@media (max-width:768px) {
+
+    body {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 22px;
+    }
+
+    .checkout-box {
+        max-width: 100%;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .checkout-box input,
+    .checkout-box textarea {
+        padding: 12px 14px;
+        margin-bottom: 14px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+
+    textarea {
+        height: 90px;
+    }
+
+    #orderSummary {
+        padding: 16px;
+        border-radius: 8px;
+        margin: 15px 0;
+    }
+
+    .order-item {
+        padding: 8px 0;
+        font-size: 14px;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .order-item span:last-child {
+        font-weight: 600;
+    }
+
+    .checkout-box h2 {
+        font-size: 20px;
+        margin: 15px 0;
+    }
+
+    #placeOrderBtn {
+        padding: 13px;
+        font-size: 15px;
+        border-radius: 6px;
+    }
+
+    #placeOrderBtn:hover {
+        transform: translateY(-1px);
+    }
+
+    /* Payment Section */
+    .payment-section {
+        padding: 16px;
+        margin-top: 20px;
+        border-radius: 8px;
+    }
+
+    .payment-section h3 {
+        font-size: 17px;
+        margin-bottom: 12px;
+    }
+
+    .payment-option {
+        font-size: 14px;
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+
+    .payment-option input[type="radio"] {
+        width: 16px;
+        height: 16px;
+        accent-color: #111;
+    }
+
+    .jazzcash-section {
+        padding: 16px;
+        margin-top: 15px;
+        border-radius: 8px;
+    }
+
+    .qr-image {
+        width: 160px;
+        height: 160px;
+        margin: 12px auto;
+    }
+
+    .jazzcash-section p {
+        font-size: 13px;
+        margin: 8px 0;
+        line-height: 1.5;
+    }
+
+    #paymentReceipt {
+        padding: 8px 10px;
+        font-size: 13px;
+        border-radius: 6px;
+        margin-top: 10px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Small (480px - 600px)
+   ================================================================ */
+
+@media (max-width:600px) {
+
+    body {
+        padding: 15px 12px;
+    }
+
+    h1 {
+        font-size: 26px;
+        margin-bottom: 18px;
+    }
+
+    .checkout-box {
+        padding: 20px 16px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .checkout-box input,
+    .checkout-box textarea {
+        padding: 11px 12px;
+        margin-bottom: 12px;
+        font-size: 13px;
+        border-radius: 6px;
+    }
+
+    textarea {
+        height: 80px;
+    }
+
+    #orderSummary {
+        padding: 14px;
+        border-radius: 6px;
+        margin: 12px 0;
+    }
+
+    .order-item {
+        padding: 6px 0;
+        font-size: 13px;
+        flex-wrap: wrap;
+        gap: 3px;
+    }
+
+    .order-item span:last-child {
+        font-weight: 600;
+    }
+
+    .checkout-box h2 {
+        font-size: 18px;
+        margin: 12px 0;
+    }
+
+    #placeOrderBtn {
+        padding: 12px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+
+    /* Payment Section */
+    .payment-section {
+        padding: 14px;
+        margin-top: 18px;
+        border-radius: 8px;
+    }
+
+    .payment-section h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .payment-option {
+        font-size: 13px;
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+
+    .payment-option input[type="radio"] {
+        width: 15px;
+        height: 15px;
+        flex-shrink: 0;
+    }
+
+    .jazzcash-section {
+        padding: 14px;
+        margin-top: 12px;
+        border-radius: 8px;
+    }
+
+    .qr-image {
+        width: 140px;
+        height: 140px;
+        margin: 10px auto;
+    }
+
+    .jazzcash-section p {
+        font-size: 12px;
+        margin: 6px 0;
+        line-height: 1.5;
+    }
+
+    #paymentReceipt {
+        padding: 6px 8px;
+        font-size: 12px;
+        border-radius: 5px;
+        margin-top: 8px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Extra Small (max-width: 480px)
+   ================================================================ */
+
+@media (max-width:480px) {
+
+    body {
+        padding: 12px 8px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .checkout-box {
+        padding: 16px 12px;
+        border-radius: 8px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    }
+
+    .checkout-box input,
+    .checkout-box textarea {
+        padding: 10px 11px;
+        margin-bottom: 10px;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
+    textarea {
+        height: 70px;
+    }
+
+    #orderSummary {
+        padding: 12px;
+        border-radius: 6px;
+        margin: 10px 0;
+    }
+
+    .order-item {
+        padding: 5px 0;
+        font-size: 12px;
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+
+    .order-item span:last-child {
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+    .checkout-box h2 {
+        font-size: 17px;
+        margin: 10px 0;
+    }
+
+    #placeOrderBtn {
+        padding: 11px;
+        font-size: 13px;
+        border-radius: 5px;
+    }
+
+    /* Payment Section */
+    .payment-section {
+        padding: 12px;
+        margin-top: 15px;
+        border-radius: 6px;
+    }
+
+    .payment-section h3 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .payment-option {
+        font-size: 12px;
+        gap: 6px;
+        margin-bottom: 6px;
+    }
+
+    .payment-option input[type="radio"] {
+        width: 14px;
+        height: 14px;
+    }
+
+    .jazzcash-section {
+        padding: 12px;
+        margin-top: 10px;
+        border-radius: 6px;
+    }
+
+    .qr-image {
+        width: 120px;
+        height: 120px;
+        margin: 8px auto;
+    }
+
+    .jazzcash-section p {
+        font-size: 11px;
+        margin: 5px 0;
+        line-height: 1.4;
+    }
+
+    #paymentReceipt {
+        padding: 5px 6px;
+        font-size: 11px;
+        border-radius: 4px;
+        margin-top: 6px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Extra Small Phones (max-width: 360px)
+   ================================================================ */
+
+@media (max-width:360px) {
+
+    body {
+        padding: 10px 5px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .checkout-box {
+        padding: 12px 10px;
+        border-radius: 6px;
+    }
+
+    .checkout-box input,
+    .checkout-box textarea {
+        padding: 8px 10px;
+        margin-bottom: 8px;
+        font-size: 11px;
+        border-radius: 4px;
+    }
+
+    textarea {
+        height: 60px;
+    }
+
+    #orderSummary {
+        padding: 10px;
+        border-radius: 4px;
+        margin: 8px 0;
+    }
+
+    .order-item {
+        padding: 4px 0;
+        font-size: 11px;
+        flex-wrap: wrap;
+    }
+
+    .order-item span:last-child {
+        font-size: 12px;
+    }
+
+    .checkout-box h2 {
+        font-size: 15px;
+        margin: 8px 0;
+    }
+
+    #placeOrderBtn {
+        padding: 9px;
+        font-size: 12px;
+        border-radius: 4px;
+    }
+
+    /* Payment Section */
+    .payment-section {
+        padding: 10px;
+        margin-top: 12px;
+        border-radius: 4px;
+    }
+
+    .payment-section h3 {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .payment-option {
+        font-size: 11px;
+        gap: 4px;
+        margin-bottom: 4px;
+    }
+
+    .payment-option input[type="radio"] {
+        width: 12px;
+        height: 12px;
+    }
+
+    .jazzcash-section {
+        padding: 10px;
+        margin-top: 8px;
+        border-radius: 4px;
+    }
+
+    .qr-image {
+        width: 100px;
+        height: 100px;
+        margin: 6px auto;
+    }
+
+    .jazzcash-section p {
+        font-size: 10px;
+        margin: 4px 0;
+    }
+
+    #paymentReceipt {
+        padding: 4px 5px;
+        font-size: 10px;
+        border-radius: 3px;
+        margin-top: 4px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Landscape Mode for Mobile Phones (max-height: 500px)
+   ================================================================ */
+
+@media (max-height:500px) and (orientation:landscape) {
+
+    body {
+        padding: 15px 25px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .checkout-box {
+        max-width: 600px;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 0 auto;
+    }
+
+    .checkout-box input,
+    .checkout-box textarea {
+        padding: 8px 12px;
+        margin-bottom: 10px;
+        font-size: 13px;
+        border-radius: 5px;
+    }
+
+    textarea {
+        height: 60px;
+    }
+
+    #orderSummary {
+        padding: 12px;
+        border-radius: 6px;
+        margin: 10px 0;
+    }
+
+    .order-item {
+        padding: 4px 0;
+        font-size: 13px;
+    }
+
+    .checkout-box h2 {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    #placeOrderBtn {
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+    }
+
+    /* Payment Section */
+    .payment-section {
+        padding: 12px;
+        margin-top: 15px;
+        border-radius: 6px;
+    }
+
+    .payment-section h3 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .payment-option {
+        font-size: 13px;
+        gap: 6px;
+        margin-bottom: 6px;
+    }
+
+    .jazzcash-section {
+        padding: 12px;
+        margin-top: 10px;
+        border-radius: 6px;
+    }
+
+    .qr-image {
+        width: 100px;
+        height: 100px;
+        margin: 8px auto;
+    }
+
+    .jazzcash-section p {
+        font-size: 12px;
+        margin: 4px 0;
+    }
+
+    #paymentReceipt {
+        padding: 5px 8px;
+        font-size: 12px;
+        margin-top: 6px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Very Large Screens (1400px+)
+   ================================================================ */
+
+@media (min-width:1400px) {
+
+    body {
+        padding: 50px 60px;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-bottom: 35px;
+    }
+
+    .checkout-box {
+        max-width: 800px;
+        padding: 45px 50px;
+        border-radius: 20px;
+        box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+    }
+
+    .checkout-box input,
+    .checkout-box textarea {
+        padding: 16px 18px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        border-radius: 10px;
+        border-width: 2px;
+    }
+
+    textarea {
+        height: 140px;
+    }
+
+    #orderSummary {
+        padding: 25px;
+        border-radius: 12px;
+        margin: 25px 0;
+    }
+
+    .order-item {
+        padding: 12px 0;
+        font-size: 17px;
+    }
+
+    .checkout-box h2 {
+        font-size: 26px;
+        margin: 25px 0;
+    }
+
+    #placeOrderBtn {
+        padding: 18px;
+        font-size: 19px;
+        border-radius: 10px;
+    }
+
+    #placeOrderBtn:hover {
+        transform: translateY(-3px);
+    }
+
+    /* Payment Section */
+    .payment-section {
+        padding: 25px;
+        margin-top: 35px;
+        border-radius: 14px;
+    }
+
+    .payment-section h3 {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    .payment-option {
+        font-size: 18px;
+        gap: 12px;
+        margin-bottom: 14px;
+    }
+
+    .jazzcash-section {
+        padding: 25px;
+        margin-top: 20px;
+        border-radius: 14px;
+    }
+
+    .qr-image {
+        width: 250px;
+        height: 250px;
+        margin: 25px auto;
+    }
+
+    .jazzcash-section p {
+        font-size: 16px;
+        margin: 12px 0;
+    }
+
+    #paymentReceipt {
+        padding: 12px 16px;
+        font-size: 16px;
+        margin-top: 18px;
+        border-radius: 8px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Dark Mode Support
+   ================================================================ */
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background: #1a1a1a;
+    }
+
+    h1 {
+        color: #fff;
+    }
+
+    .checkout-box {
+        background: #2a2a2a;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .checkout-box input,
+    .checkout-box textarea {
+        background: #3a3a3a;
+        border-color: #444;
+        color: #fff;
+    }
+
+    .checkout-box input:focus,
+    .checkout-box textarea:focus {
+        border-color: #FFD166;
+    }
+
+    .checkout-box input::placeholder,
+    .checkout-box textarea::placeholder {
+        color: #888;
+    }
+
+    #orderSummary {
+        background: #333;
+    }
+
+    .order-item {
+        color: #ddd;
+        border-bottom-color: #444;
+    }
+
+    .order-item:last-child {
+        border: none;
+    }
+
+    .checkout-box h2 {
+        color: #fff;
+    }
+
+    #placeOrderBtn {
+        background: #FFD166;
+        color: #111;
+    }
+
+    #placeOrderBtn:hover {
+        background: #fff;
+        color: #111;
+    }
+
+    /* Payment Section */
+    .payment-section {
+        border-color: #444;
+        background: #333;
+    }
+
+    .payment-section h3 {
+        color: #fff;
+    }
+
+    .payment-option {
+        color: #ddd;
+    }
+
+    .jazzcash-section {
+        border-color: #444;
+        background: #2a2a2a;
+    }
+
+    .jazzcash-section p {
+        color: #ddd;
+    }
+
+    #paymentReceipt {
+        background: #3a3a3a;
+        border-color: #444;
+        color: #fff;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Print Styles
+   ================================================================ */
+
+@media print {
+
+    body {
+        background: white !important;
+        padding: 20px !important;
+    }
+
+    h1 {
+        color: #111 !important;
+    }
+
+    .checkout-box {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        padding: 25px !important;
+    }
+
+    .checkout-box input,
+    .checkout-box textarea {
+        border: 1px solid #ddd !important;
+        background: white !important;
+    }
+
+    #placeOrderBtn {
+        display: none !important;
+    }
+
+    #orderSummary {
+        background: #f9f9f9 !important;
+        border: 1px solid #ddd !important;
+    }
+
+    .payment-section {
+        border: 1px solid #ddd !important;
+        background: #f9f9f9 !important;
+    }
+
+    .jazzcash-section {
+        border: 1px solid #ddd !important;
+        background: #f9f9f9 !important;
+    }
+
+    .qr-image {
+        max-width: 150px !important;
+        max-height: 150px !important;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Reduced Motion (Accessibility)
+   ================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .checkout-box input,
+    .checkout-box textarea,
+    #placeOrderBtn {
+        transition: none !important;
+    }
+
+    #placeOrderBtn:hover {
+        transform: none !important;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Additional Helper Classes
+   ================================================================ */
+
+/* ===== Loading State ===== */
+.loading {
+    text-align: center;
+    padding: 30px 20px;
+    color: #888;
+}
+
+.loading i {
+    font-size: 30px;
+    color: #8B5E3C;
+    margin-bottom: 15px;
+    display: block;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width:600px) {
+    .loading {
+        padding: 20px 15px;
+        font-size: 14px;
+    }
+    .loading i {
+        font-size: 24px;
+    }
+}
+
+/* ===== Success State ===== */
+.success-message {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.success-message i {
+    font-size: 60px;
+    color: #16a34a;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.success-message h2 {
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.success-message p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.success-message .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #111;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.success-message .btn:hover {
+    background: #333;
+}
+
+@media (max-width:600px) {
+    .success-message {
+        padding: 30px 15px;
+    }
+    .success-message i {
+        font-size: 40px;
+    }
+    .success-message h2 {
+        font-size: 20px;
+    }
+    .success-message p {
+        font-size: 14px;
+    }
+}
+
+/* ===== Form Row (2 Columns) ===== */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+@media (max-width:600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+/* ===== Card Input Group ===== */
+.card-group {
+    display: flex;
+    gap: 10px;
+}
+
+.card-group input {
+    flex: 1;
+}
+
+@media (max-width:600px) {
+    .card-group {
+        flex-direction: column;
+        gap: 0;
+    }
+}

@@ -244,3 +244,756 @@ h1{
 
 
 }
+
+/* ================================================================
+   📱 RESPONSIVE MEDIA QUERIES - Sabhi Devices Ke Liye
+   ================================================================ */
+
+/* ================================================================
+   🔹 Laptop / Small Desktop (1024px - 1200px)
+   ================================================================ */
+
+@media (max-width:1200px) {
+
+    body {
+        padding: 35px;
+    }
+
+    #orderDetails {
+        max-width: 800px;
+        padding: 30px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    #orderDetails h2 {
+        font-size: 20px;
+    }
+
+    #orderDetails p {
+        font-size: 15px;
+    }
+
+    .product-item {
+        padding: 14px;
+        margin: 8px 0;
+    }
+
+    .status {
+        font-size: 13px;
+        padding: 7px 13px;
+    }
+
+    .total-price {
+        font-size: 22px;
+    }
+
+    .back-btn {
+        padding: 11px 22px;
+        font-size: 15px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Tablet (768px - 1024px)
+   ================================================================ */
+
+@media (max-width:1024px) {
+
+    body {
+        padding: 30px 25px;
+    }
+
+    #orderDetails {
+        max-width: 100%;
+        padding: 28px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 28px;
+    }
+
+    #orderDetails h2 {
+        font-size: 20px;
+        margin-top: 22px;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+    }
+
+    #orderDetails p {
+        font-size: 15px;
+        margin: 8px 0;
+    }
+
+    .product-item {
+        padding: 14px 16px;
+        margin: 8px 0;
+        border-radius: 8px;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .status {
+        font-size: 13px;
+        padding: 6px 12px;
+        border-radius: 15px;
+    }
+
+    .total-price {
+        font-size: 22px;
+        margin-top: 18px;
+    }
+
+    .back-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        border-radius: 6px;
+        margin-top: 20px;
+    }
+
+    .back-btn:hover {
+        transform: translateY(-1px);
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Large (600px - 768px)
+   ================================================================ */
+
+@media (max-width:768px) {
+
+    body {
+        padding: 20px 15px;
+    }
+
+    #orderDetails {
+        padding: 22px 18px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    h1 {
+        font-size: 26px;
+        margin-bottom: 22px;
+    }
+
+    #orderDetails h2 {
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+        border-bottom-width: 2px;
+    }
+
+    #orderDetails p {
+        font-size: 14px;
+        margin: 7px 0;
+        line-height: 1.6;
+    }
+
+    .product-item {
+        padding: 12px 14px;
+        margin: 7px 0;
+        border-radius: 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        border-width: 1px;
+    }
+
+    .product-item span:last-child {
+        align-self: flex-end;
+        font-weight: 600;
+    }
+
+    .status {
+        font-size: 12px;
+        padding: 5px 12px;
+        border-radius: 15px;
+        display: inline-block;
+    }
+
+    .total-price {
+        font-size: 20px;
+        margin-top: 15px;
+        padding-top: 12px;
+        border-top: 2px solid #eee;
+    }
+
+    .back-btn {
+        padding: 10px 18px;
+        font-size: 14px;
+        border-radius: 6px;
+        margin-top: 18px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .back-btn:hover {
+        transform: none;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Small (480px - 600px)
+   ================================================================ */
+
+@media (max-width:600px) {
+
+    body {
+        padding: 15px 12px;
+    }
+
+    #orderDetails {
+        padding: 18px 14px;
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+
+    #orderDetails h2 {
+        font-size: 17px;
+        margin-top: 18px;
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+    }
+
+    #orderDetails p {
+        font-size: 13px;
+        margin: 6px 0;
+        line-height: 1.6;
+    }
+
+    /* Customer info labels */
+    #orderDetails p strong {
+        display: inline-block;
+        min-width: 80px;
+    }
+
+    .product-item {
+        padding: 10px 12px;
+        margin: 6px 0;
+        border-radius: 6px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .product-item span {
+        font-size: 13px;
+    }
+
+    .product-item span:last-child {
+        align-self: flex-end;
+        font-weight: 600;
+    }
+
+    .status {
+        font-size: 11px;
+        padding: 4px 10px;
+        border-radius: 12px;
+    }
+
+    .total-price {
+        font-size: 19px;
+        margin-top: 12px;
+        padding-top: 10px;
+    }
+
+    .back-btn {
+        padding: 9px 16px;
+        font-size: 13px;
+        border-radius: 5px;
+        margin-top: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Extra Small (max-width: 480px)
+   ================================================================ */
+
+@media (max-width:480px) {
+
+    body {
+        padding: 12px 10px;
+    }
+
+    #orderDetails {
+        padding: 15px 12px;
+        border-radius: 8px;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+
+    #orderDetails h2 {
+        font-size: 16px;
+        margin-top: 16px;
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+        border-bottom-width: 2px;
+    }
+
+    #orderDetails p {
+        font-size: 12px;
+        margin: 5px 0;
+        line-height: 1.5;
+        word-break: break-word;
+    }
+
+    #orderDetails p strong {
+        display: inline-block;
+        min-width: 70px;
+        font-size: 12px;
+    }
+
+    .product-item {
+        padding: 8px 10px;
+        margin: 5px 0;
+        border-radius: 6px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .product-item span {
+        font-size: 12px;
+    }
+
+    .product-item span:last-child {
+        align-self: flex-end;
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+    .status {
+        font-size: 10px;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-weight: 600;
+    }
+
+    .total-price {
+        font-size: 18px;
+        margin-top: 12px;
+        padding-top: 10px;
+        border-top: 2px solid #eee;
+    }
+
+    .back-btn {
+        padding: 8px 14px;
+        font-size: 12px;
+        border-radius: 5px;
+        margin-top: 14px;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Extra Small Phones (max-width: 360px)
+   ================================================================ */
+
+@media (max-width:360px) {
+
+    body {
+        padding: 8px 6px;
+    }
+
+    #orderDetails {
+        padding: 12px 10px;
+        border-radius: 6px;
+    }
+
+    h1 {
+        font-size: 19px;
+        margin-bottom: 14px;
+    }
+
+    #orderDetails h2 {
+        font-size: 14px;
+        margin-top: 14px;
+        margin-bottom: 6px;
+        padding-bottom: 5px;
+    }
+
+    #orderDetails p {
+        font-size: 11px;
+        margin: 4px 0;
+        line-height: 1.5;
+    }
+
+    #orderDetails p strong {
+        min-width: 60px;
+        font-size: 11px;
+    }
+
+    .product-item {
+        padding: 6px 8px;
+        margin: 4px 0;
+        border-radius: 4px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .product-item span {
+        font-size: 11px;
+    }
+
+    .product-item span:last-child {
+        font-size: 12px;
+    }
+
+    .status {
+        font-size: 9px;
+        padding: 3px 8px;
+        border-radius: 10px;
+    }
+
+    .total-price {
+        font-size: 16px;
+        margin-top: 10px;
+        padding-top: 8px;
+    }
+
+    .back-btn {
+        padding: 7px 12px;
+        font-size: 11px;
+        border-radius: 4px;
+        margin-top: 12px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Landscape Mode for Mobile Phones (max-height: 500px)
+   ================================================================ */
+
+@media (max-height:500px) and (orientation:landscape) {
+
+    body {
+        padding: 15px 25px;
+    }
+
+    #orderDetails {
+        padding: 18px 20px;
+        border-radius: 10px;
+        max-width: 750px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    #orderDetails h2 {
+        font-size: 17px;
+        margin-top: 15px;
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+    }
+
+    #orderDetails p {
+        font-size: 13px;
+        margin: 5px 0;
+    }
+
+    .product-item {
+        padding: 8px 12px;
+        margin: 5px 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .product-item span {
+        font-size: 12px;
+    }
+
+    .status {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+
+    .total-price {
+        font-size: 18px;
+        margin-top: 12px;
+    }
+
+    .back-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+        margin-top: 12px;
+        width: auto;
+        display: inline-block;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Very Large Screens (1400px+)
+   ================================================================ */
+
+@media (min-width:1400px) {
+
+    body {
+        padding: 50px 60px;
+    }
+
+    #orderDetails {
+        max-width: 1000px;
+        padding: 45px 50px;
+        border-radius: 20px;
+        box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+    }
+
+    h1 {
+        font-size: 38px;
+        margin-bottom: 40px;
+    }
+
+    #orderDetails h2 {
+        font-size: 26px;
+        margin-top: 30px;
+        margin-bottom: 18px;
+        padding-bottom: 12px;
+        border-bottom-width: 3px;
+    }
+
+    #orderDetails p {
+        font-size: 18px;
+        margin: 12px 0;
+        line-height: 1.8;
+    }
+
+    .product-item {
+        padding: 18px 22px;
+        margin: 12px 0;
+        border-radius: 12px;
+    }
+
+    .product-item span {
+        font-size: 17px;
+    }
+
+    .status {
+        font-size: 16px;
+        padding: 10px 18px;
+        border-radius: 25px;
+    }
+
+    .total-price {
+        font-size: 28px;
+        margin-top: 25px;
+    }
+
+    .back-btn {
+        padding: 14px 30px;
+        font-size: 17px;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+
+    .back-btn:hover {
+        transform: translateY(-3px);
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Dark Mode Support (Optional)
+   ================================================================ */
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background: #1a1a1a;
+    }
+
+    #orderDetails {
+        background: #2a2a2a;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    h1 {
+        color: #fff;
+    }
+
+    #orderDetails h2 {
+        color: #fff;
+        border-bottom-color: #FFD166;
+    }
+
+    #orderDetails p {
+        color: #ccc;
+    }
+
+    #orderDetails p::first-letter {
+        color: #FFD166;
+    }
+
+    .product-item {
+        background: #333;
+        border-color: #444;
+    }
+
+    .product-item span {
+        color: #ddd;
+    }
+
+    .status {
+        background: #FFD166;
+        color: #111;
+    }
+
+    .total-price {
+        color: #FFD166;
+    }
+
+    .back-btn {
+        background: #FFD166;
+        color: #111;
+    }
+
+    .back-btn:hover {
+        background: #fff;
+        color: #111;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Print Styles
+   ================================================================ */
+
+@media print {
+
+    body {
+        background: white !important;
+        padding: 20px !important;
+    }
+
+    #orderDetails {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        padding: 25px !important;
+    }
+
+    .back-btn {
+        display: none !important;
+    }
+
+    .status {
+        background: #111 !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .product-item {
+        border: 1px solid #ddd !important;
+        background: #f9f9f9 !important;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Reduced Motion (Accessibility)
+   ================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .back-btn {
+        transition: none !important;
+    }
+
+    .back-btn:hover {
+        transform: none !important;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Loading/Empty State Styles (Optional)
+   ================================================================ */
+
+.loading {
+    text-align: center;
+    padding: 40px 20px;
+    color: #888;
+    font-size: 16px;
+}
+
+.loading i {
+    font-size: 30px;
+    color: #8B5E3C;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #888;
+}
+
+.empty-state i {
+    font-size: 50px;
+    color: #ddd;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.empty-state p {
+    font-size: 16px;
+    color: #999;
+}
+
+@media (max-width:600px) {
+    .loading {
+        padding: 30px 15px;
+        font-size: 14px;
+    }
+    .empty-state {
+        padding: 30px 15px;
+    }
+    .empty-state i {
+        font-size: 40px;
+    }
+    .empty-state p {
+        font-size: 14px;
+    }
+}

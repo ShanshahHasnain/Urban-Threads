@@ -204,3 +204,641 @@ body{
 
 
 }
+
+/* ================================================================
+   📱 RESPONSIVE MEDIA QUERIES - Edit Product Page
+   ================================================================ */
+
+/* ================================================================
+   🔹 Tablet (768px - 1024px)
+   ================================================================ */
+
+@media (max-width:1024px) {
+
+    body {
+        padding: 25px 20px;
+    }
+
+    .product-form {
+        max-width: 550px;
+        padding: 35px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .product-form h1 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .product-form input,
+    .product-form textarea {
+        padding: 13px 14px;
+        margin-bottom: 16px;
+        font-size: 14px;
+        border-radius: 7px;
+    }
+
+    .product-form textarea {
+        height: 120px;
+    }
+
+    #updateProductBtn {
+        padding: 13px;
+        font-size: 15px;
+        border-radius: 7px;
+    }
+
+    #updateProductBtn:hover {
+        transform: translateY(-1px);
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Large (600px - 768px)
+   ================================================================ */
+
+@media (max-width:768px) {
+
+    body {
+        padding: 20px 15px;
+        align-items: center;
+    }
+
+    .product-form {
+        max-width: 100%;
+        padding: 30px 25px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+
+    .product-form h1 {
+        font-size: 26px;
+        margin-bottom: 22px;
+    }
+
+    .product-form input,
+    .product-form textarea {
+        padding: 12px 13px;
+        margin-bottom: 14px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+
+    .product-form textarea {
+        height: 110px;
+    }
+
+    #updateProductBtn {
+        padding: 12px;
+        font-size: 15px;
+        border-radius: 6px;
+    }
+
+    #updateProductBtn:hover {
+        transform: translateY(-1px);
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Small (480px - 600px)
+   ================================================================ */
+
+@media (max-width:600px) {
+
+    body {
+        padding: 15px 12px;
+    }
+
+    .product-form {
+        padding: 25px 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .product-form h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .product-form input,
+    .product-form textarea {
+        padding: 11px 12px;
+        margin-bottom: 12px;
+        font-size: 13px;
+        border-radius: 6px;
+    }
+
+    .product-form textarea {
+        height: 100px;
+    }
+
+    #updateProductBtn {
+        padding: 11px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Mobile Extra Small (max-width: 480px)
+   ================================================================ */
+
+@media (max-width:480px) {
+
+    body {
+        padding: 12px 8px;
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
+    .product-form {
+        padding: 20px 15px;
+        border-radius: 8px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    }
+
+    .product-form h1 {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    .product-form input,
+    .product-form textarea {
+        padding: 10px 11px;
+        margin-bottom: 10px;
+        font-size: 13px;
+        border-radius: 5px;
+        border-width: 1px;
+    }
+
+    .product-form textarea {
+        height: 90px;
+    }
+
+    #updateProductBtn {
+        padding: 10px;
+        font-size: 13px;
+        border-radius: 5px;
+    }
+
+    #updateProductBtn:hover {
+        transform: translateY(0px);
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Extra Small Phones (max-width: 360px)
+   ================================================================ */
+
+@media (max-width:360px) {
+
+    body {
+        padding: 10px 6px;
+        padding-top: 15px;
+    }
+
+    .product-form {
+        padding: 16px 12px;
+        border-radius: 6px;
+    }
+
+    .product-form h1 {
+        font-size: 19px;
+        margin-bottom: 15px;
+    }
+
+    .product-form input,
+    .product-form textarea {
+        padding: 8px 10px;
+        margin-bottom: 8px;
+        font-size: 12px;
+        border-radius: 4px;
+    }
+
+    .product-form textarea {
+        height: 80px;
+    }
+
+    #updateProductBtn {
+        padding: 9px;
+        font-size: 12px;
+        border-radius: 4px;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Landscape Mode for Mobile Phones (max-height: 500px)
+   ================================================================ */
+
+@media (max-height:500px) and (orientation:landscape) {
+
+    body {
+        padding: 15px 20px;
+        align-items: center;
+        padding-top: 15px;
+    }
+
+    .product-form {
+        max-width: 550px;
+        padding: 20px 25px;
+        border-radius: 10px;
+    }
+
+    .product-form h1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .product-form input,
+    .product-form textarea {
+        padding: 8px 10px;
+        margin-bottom: 10px;
+        font-size: 13px;
+        border-radius: 5px;
+    }
+
+    .product-form textarea {
+        height: 70px;
+    }
+
+    #updateProductBtn {
+        padding: 9px;
+        font-size: 13px;
+        border-radius: 5px;
+    }
+
+    #updateProductBtn:hover {
+        transform: translateY(-1px);
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Very Large Screens (1400px+)
+   ================================================================ */
+
+@media (min-width:1400px) {
+
+    body {
+        padding: 40px 50px;
+    }
+
+    .product-form {
+        max-width: 700px;
+        padding: 50px 55px;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+
+    .product-form h1 {
+        font-size: 36px;
+        margin-bottom: 35px;
+    }
+
+    .product-form input,
+    .product-form textarea {
+        padding: 16px 18px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        border-radius: 10px;
+        border-width: 2px;
+    }
+
+    .product-form textarea {
+        height: 150px;
+    }
+
+    #updateProductBtn {
+        padding: 16px;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+
+    #updateProductBtn:hover {
+        transform: translateY(-3px);
+        background: #222;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Dark Mode Support
+   ================================================================ */
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background: #1a1a1a;
+    }
+
+    .product-form {
+        background: #2a2a2a;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .product-form h1 {
+        color: #fff;
+    }
+
+    .product-form input,
+    .product-form textarea {
+        background: #3a3a3a;
+        border-color: #444;
+        color: #fff;
+    }
+
+    .product-form input:focus,
+    .product-form textarea:focus {
+        border-color: #FFD166;
+    }
+
+    .product-form input::placeholder,
+    .product-form textarea::placeholder {
+        color: #888;
+    }
+
+    #updateProductBtn {
+        background: #FFD166;
+        color: #111;
+    }
+
+    #updateProductBtn:hover {
+        background: #fff;
+        color: #111;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Print Styles
+   ================================================================ */
+
+@media print {
+
+    body {
+        background: white !important;
+        padding: 20px !important;
+        display: block !important;
+        min-height: auto !important;
+    }
+
+    .product-form {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        padding: 25px !important;
+        max-width: 100% !important;
+    }
+
+    .product-form h1 {
+        color: #111 !important;
+    }
+
+    #updateProductBtn {
+        display: none !important;
+    }
+
+    .product-form input,
+    .product-form textarea {
+        border: 1px solid #ddd !important;
+        background: white !important;
+        color: #333 !important;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Reduced Motion (Accessibility)
+   ================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .product-form input,
+    .product-form textarea,
+    #updateProductBtn {
+        transition: none !important;
+    }
+
+    #updateProductBtn:hover {
+        transform: none !important;
+    }
+
+}
+
+
+/* ================================================================
+   🔹 Additional Helper Classes
+   ================================================================ */
+
+/* ===== Loading State ===== */
+.loading {
+    text-align: center;
+    padding: 30px 20px;
+    color: #888;
+}
+
+.loading i {
+    font-size: 30px;
+    color: #8B5E3C;
+    margin-bottom: 15px;
+    display: block;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width:600px) {
+    .loading {
+        padding: 20px 15px;
+        font-size: 14px;
+    }
+    .loading i {
+        font-size: 24px;
+    }
+}
+
+/* ===== Success/Error Messages ===== */
+.message {
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.message.info {
+    background: #cce5ff;
+    color: #004085;
+    border: 1px solid #b8daff;
+}
+
+@media (max-width:600px) {
+    .message {
+        padding: 10px 12px;
+        font-size: 13px;
+        border-radius: 6px;
+        margin-bottom: 14px;
+    }
+}
+
+/* ===== Form Row (2 Columns) ===== */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+@media (max-width:600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+/* ===== Image Preview ===== */
+.image-preview {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    display: none;
+}
+
+.image-preview.visible {
+    display: block;
+}
+
+@media (max-width:600px) {
+    .image-preview {
+        max-height: 150px;
+        border-radius: 6px;
+        margin-bottom: 12px;
+    }
+}
+
+/* ===== Image Upload Area ===== */
+.image-upload {
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+    margin-bottom: 18px;
+}
+
+.image-upload:hover {
+    border-color: #111;
+    background: #fafafa;
+}
+
+.image-upload i {
+    font-size: 40px;
+    color: #aaa;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.image-upload p {
+    color: #888;
+    font-size: 14px;
+}
+
+@media (max-width:600px) {
+    .image-upload {
+        padding: 20px;
+        border-radius: 6px;
+    }
+    .image-upload i {
+        font-size: 30px;
+    }
+    .image-upload p {
+        font-size: 12px;
+    }
+}
+
+/* ===== Cancel Button ===== */
+#cancelBtn {
+    padding: 12px 25px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .3s;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#cancelBtn:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+@media (max-width:600px) {
+    #cancelBtn {
+        padding: 10px;
+        font-size: 13px;
+        border-radius: 6px;
+    }
+    #cancelBtn:hover {
+        transform: translateY(-1px);
+    }
+}
+
+/* ===== Button Group ===== */
+.btn-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-group button {
+    flex: 1;
+    min-width: 120px;
+}
+
+@media (max-width:600px) {
+    .btn-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .btn-group button {
+        flex: none;
+        width: 100%;
+        min-width: auto;
+    }
+}
