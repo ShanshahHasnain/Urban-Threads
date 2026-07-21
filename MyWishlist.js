@@ -59,7 +59,7 @@ onAuthStateChanged(auth, async (user) => {
         <h3>${product.name}</h3>
 
     
-        <p>$${product.price}</p>
+        <p>PKR${product.price}</p>
 
     
         <button class="move-cart-btn">
