@@ -3,16 +3,16 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>
-Add Product - Urban Threads Admin
-</title>
+    <title>
+        Add Product - Urban Threads Admin
+    </title>
 
 
-<link rel="stylesheet" href="AddProduct.css">
+    <link rel="stylesheet" href="AddProduct.css">
 
 </head>
 
@@ -20,75 +20,85 @@ Add Product - Urban Threads Admin
 <body>
 
 
-<div class="product-form">
+    <div class="product-form">
 
 
-<h1>
-Add New Product
-</h1>
+        <h1>
+            Add New Product
+        </h1>
 
 
-<input 
-type="text"
-id="productName"
-placeholder="Product Name">
+        <input type="text" id="productName" placeholder="Product Name">
 
 
 
-<input 
-type="text"
-id="productCategory"
-placeholder="Category">
+        <select id="productCategory">
+
+            <option value="">
+                Select Category
+            </option>
+
+            <option value="T-Shirts">
+                T-Shirts
+            </option>
+
+            <option value="Shirts">
+                Shirts
+            </option>
+
+            <option value="Hoodies">
+                Hoodies
+            </option>
+
+            <option value="Jackets">
+                Jackets
+            </option>
+
+            <option value="Jeans">
+                Jeans
+            </option>
+
+            <option value="Trousers">
+                Trousers
+            </option>
+
+        </select>
 
 
 
-<input 
-type="number"
-id="productPrice"
-placeholder="Price">
+        <input type="number" id="productPrice" placeholder="Price">
 
 
 
-<input 
-type="number"
-id="productStock"
-placeholder="Stock">
+        <input type="number" id="productStock" placeholder="Stock">
 
 
 
-<input 
-type="file"
-id="productImage"
-accept="image/*">
+        <input type="file" id="productImage" accept="image/*">
 
 
-<img 
-id="imagePreview"
-style="width:150px;margin:10px 0;"
-alt="Image Preview">
+        <img id="imagePreview" style="width:150px;margin:10px 0;" alt="Image Preview">
 
 
 
-<textarea
-id="productDescription"
-placeholder="Product Description">
+        <textarea id="productDescription" placeholder="Product Description">
 </textarea>
 
 
 
-<button id="saveProductBtn">
+        <button id="saveProductBtn">
 
-Save Product
+            Save Product
 
-</button>
-
-
-
-</div>
+        </button>
 
 
 
-<script type="module" src="AddProduct.js"></script>
+    </div>
+
+
+
+    <script type="module" src="AddProduct.js"></script>
 
 
 </body>
